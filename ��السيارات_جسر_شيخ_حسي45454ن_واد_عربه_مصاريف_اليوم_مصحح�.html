@@ -1,0 +1,2142 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>متابعة سيارات الشيخ حسين</title>
+<!-- PWA & iOS Metas -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="سيارات الشيخ حسين">
+<meta name="theme-color" content="#174a70">
+
+<!-- Embedded PWA Web Manifest -->
+<link rel="manifest" href="data:application/manifest+json;utf8,%7B%22name%22%3A%22%D9%86%D8%B8%D8%A7%D9%85%20%D9%85%D8%AA%D8%A7%D8%A2%D8%B9%D8%A9%20%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B4%D9%8A%D8%AE%20%D8%AD%D8%B3%D9%8A%D9%86%22%2C%22short_name%22%3A%22%D8%A7%D9%84%D8%B4%D9%8A%D8%AE%20%D8%AD%D8%B3%D9%8A%D9%86%22%2C%22start_url%22%3A%22.%22%2C%22display%22%3A%22standalone%22%2C%22background_color%22%3A%22%23f3f6f9%22%2C%22theme_color%22%3A%22%23174a70%22%7D">
+
+<style>
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;margin:0;background:#f3f6f9;color:#17202a;padding-bottom:30px}
+header{background:#174a70;color:#fff;padding:16px;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,0.15)}
+header h2{margin:0;font-size:20px}
+nav{display:flex;gap:8px;padding:10px;background:#fff;overflow-x:auto;position:sticky;top:0;z-index:100;box-shadow:0 2px 7px #0001;-webkit-overflow-scrolling:touch}
+nav button{white-space:nowrap;flex-shrink:0}
+button{background:#174a70;color:#fff;border:0;border-radius:8px;padding:10px 14px;cursor:pointer;font-weight:bold;font-size:14px;transition:0.2s}
+button:active{opacity:0.8;transform:scale(0.98)}
+button.danger{background:#b42318}
+button.secondary{background:#64748b}
+button.success{background:#15803d}
+main{max-width:1250px;margin:auto;padding:12px}
+.card{background:#fff;padding:16px;border-radius:12px;margin-bottom:14px;box-shadow:0 2px 8px #0001}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}
+input,select{width:100%;padding:11px;margin-top:5px;border:1px solid #ccd5df;border-radius:8px;font-size:14px;background:#fff}
+table{width:100%;border-collapse:collapse;font-size:13px;min-width:900px}
+th,td{padding:10px 8px;border-bottom:1px solid #e2e8f0;text-align:center;vertical-align:middle}
+th{background:#e9f0f5;color:#1e293b;font-weight:bold}
+.table-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:8px;border:1px solid #e2e8f0}
+.hidden{display:none}
+.stat{font-size:22px;font-weight:bold;color:#174a70;margin-top:4px}
+.small{font-size:12px;color:#64748b}
+.actions{display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
+.status{font-weight:bold;padding:4px 10px;border-radius:20px;display:inline-block;font-size:12px}
+.status-على-سرا-تفريغ{background:#dcfce7;color:#166534}
+.status-في-الساحه-لوجستيه{background:#fef3c7;color:#92400e}
+.status-في-الساحه-الجمركيه{background:#f3e8ff;color:#6b21a8}
+.status-غادرت{background:#f1f5f9;color:#475569}
+.advance-row{display:grid;grid-template-columns:1fr 1fr 1.2fr auto;gap:7px;align-items:end;margin-bottom:7px}
+.banner{background:#e0f2fe;border:1px solid #bae6fd;color:#0369a1;padding:12px;border-radius:10px;margin-bottom:14px;font-size:13px;line-height:1.5}
+.banner ol{margin:6px 0 0 0;padding-right:20px}
+@media(max-width:600px){.advance-row{grid-template-columns:1fr}.advance-row button{width:100%}}
+
+@media print{.print-hide-temp{display:none !important}.print-selection-tools,.print-check{display:none !important}}
+</style>
+
+<style id="printStyles">
+@media print {
+  @page { size: A4 landscape; margin: 10mm; }
+  html, body { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  body { background:#fff !important; padding:0 !important; color:#172033 !important; }
+  header, nav, .actions, button, input[type="file"], #install { display:none !important; }
+  main { max-width:none !important; padding:0 !important; }
+  main > section { display:none !important; }
+  main > section.printing { display:block !important; }
+  .card { box-shadow:none !important; margin:0 0 10px 0 !important; padding:10px !important; border:1px solid #cbd5e1 !important; border-radius:8px !important; break-inside:avoid-page; page-break-inside:avoid; }
+  .table-wrapper { overflow:visible !important; border:0 !important; }
+  table { break-inside:auto; page-break-inside:auto; }
+  thead { display:table-header-group !important; }
+  tr { break-inside:avoid; page-break-inside:avoid; }
+  .card, .table-wrapper, table, th, td { -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; }
+  table { min-width:0 !important; width:100% !important; font-size:13px !important; }
+  th, td { padding:8px 6px !important; font-size:13px !important; line-height:1.35 !important; }
+  th { font-size:14px !important; font-weight:800 !important; }
+  td b { font-weight:800 !important; }
+  .stat { font-size:26px !important; }
+  h3, h4 { font-size:18px !important; }
+  p { font-size:14px !important; line-height:1.5 !important; }
+  .small { font-size:13px !important; }
+  .status { font-size:13px !important; padding:5px 9px !important; }
+  .status { border:1px solid #999 !important; }
+  table { border-collapse:collapse !important; }
+  th { background:#2563eb !important; color:#fff !important; border:1px solid #1d4ed8 !important; }
+  td { border:1px solid #cbd5e1 !important; background:#fff !important; }
+  tr:nth-child(even) td { background:#f1f5f9 !important; }
+  .stat, .summary, .total, .banner { -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; }
+  .actions, .print-check, .print-selection-tools, .no-print, .print-form, .print-filter { display:none !important; }
+  tr td:first-child { font-weight:700 !important; }
+  .card h3 { background:#eff6ff !important; border-right:5px solid #2563eb !important; padding:8px 10px !important; border-radius:6px !important; }
+  .status-على-سرا-تفريغ { background:#dcfce7 !important; color:#166534 !important; }
+  .status-غادرت { background:#e2e8f0 !important; color:#334155 !important; }
+  .status-في-الساحه-لوجستيه { background:#fef3c7 !important; color:#92400e !important; }
+  .status-في-الساحه-الجمركيه { background:#dbeafe !important; color:#1e40af !important; }
+  .hidden { display:none !important; }
+}
+</style>
+
+<style>
+/* رقم السيارة: أكبر وأغمق في جميع أجزاء التطبيق */
+input#carNo, input[id*="carNo"], .car-number, .carNo, .car-number-cell, td.car-number {
+  font-size: 1.18em !important;
+  font-weight: 800 !important;
+}
+</style>
+
+<style id="selectedLoadedPrintStyles">
+.selected-loaded-print-area{display:none}
+@media print{
+  body.printing-selected-loaded > *:not(#selectedLoadedPrintArea){display:none !important}
+  body.printing-selected-loaded #selectedLoadedPrintArea{display:block !important;direction:rtl}
+  body.printing-selected-loaded #selectedLoadedPrintArea .card{display:block !important;break-inside:avoid-page;page-break-inside:avoid;margin-bottom:12px !important}
+  body.printing-selected-loaded #selectedLoadedPrintArea .table-wrapper{overflow:visible !important}
+  body.printing-selected-loaded #selectedLoadedPrintArea table{width:100% !important;min-width:0 !important;border-collapse:collapse !important}
+  body.printing-selected-loaded #selectedLoadedPrintArea th{background:#dbeafe !important;color:#17324d !important;border:1px solid #9fbad0 !important}
+  body.printing-selected-loaded #selectedLoadedPrintArea td{border:1px solid #cbd5e1 !important}
+  body.printing-selected-loaded #selectedLoadedPrintArea tr:nth-child(even) td{background:#f8fafc !important}
+  .selected-print-title{text-align:center;margin-bottom:12px}
+  .selected-print-title h2{margin:0 0 6px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h2>🚛 نظام متابعة سيارات الشيخ حسين</h2>
+</header>
+
+<nav>
+<button onclick="show('home')">🏠 الرئيسية</button>
+<button onclick="show('add')">➕ إضافة رحلة</button><button onclick="show('carsDrivers');renderMasterCars()">🚛 السيارات والسائقين</button>
+<button class="secondary" onclick="chooseAutoBackupFile()">🔄 اختيار ملف النسخة التلقائية</button>
+<button onclick="show('car')">🔎 بحث سيارة</button>
+<button onclick="show('orders')">📦 الطلبات المفتوحة</button>
+<button onclick="show('all')">📋 كل الرحلات</button>
+<button onclick="show('unloaded')">🚛 السيارات المفرغة</button>
+<button onclick="show('available')">🚛 السيارات الموجودة حالياً</button>
+<button onclick="show('departed')">🚪 السيارات التي غادرت</button>
+<button onclick="show('loadedSearch')">📦 بحث التحميل</button>
+<button onclick="show('dailyExpenses')">💰 مصاريف اليوم</button>
+<button onclick="show('warehouse');renderWarehouse()">📦 المخزن</button>
+<button onclick="show('install')" style="background:#0284c7">📲 تثبيت التطبيق</button>
+</nav>
+
+<main>
+
+<section id="home">
+<div class="actions" style="margin-bottom:10px"><button onclick="printCurrentView()">🖨️ طباعة</button></div>
+<div class="grid">
+<div class="card">إجمالي الرحلات المتبقية<div id="n" class="stat">0</div></div>
+<div class="card">إجمالي الأجار<div id="r" class="stat">0</div></div>
+<div class="card">إجمالي السلف<div id="a" class="stat">0</div></div>
+<div class="card">إجمالي المصاريف<div id="e" class="stat">0</div></div>
+<div class="card">إجمالي مصاريف الأعطال<div id="faultTotal" class="stat">0</div></div>
+</div>
+<div class="card">
+  <h3>⏱️ آخر الرحلات المسجلة</h3>
+  <div id="recent"></div>
+</div>
+</section>
+
+<section id="carsDrivers" class="hidden"><div class="card"><h3>🚛 السيارات والسائقين</h3><p class="small">ابحث عن رقم السيارة لمعرفة إذا كان مسجلاً، وسيظهر رقم السيارة ورقم/اسم السائق. يمكنك تعديل بيانات السيارة والسائق مباشرة.</p><div class="grid"><label>🔎 بحث عن رقم السيارة<input id="masterCarSearch" placeholder="اكتب رقم السيارة" oninput="searchMasterCar()"></label></div><div id="masterCarSearchOut"></div><hr><h4 id="masterFormTitle">➕ إضافة سيارة وسائق</h4><div class="grid"><label>رقم السيارة<input id="masterCarNo"></label><label>رقم/اسم السائق<input id="masterDriver"></label></div><input type="hidden" id="masterEditIndex" value="-1"><button class="success" id="masterSaveBtn" onclick="saveMasterCar()">➕ إضافة</button><button class="secondary hidden" id="masterCancelBtn" onclick="cancelMasterEdit()">إلغاء التعديل</button><div id="masterCarsOut"></div></div></section>
+<section id="add" class="hidden">
+<div class="actions" style="margin-bottom:10px"><button onclick="printCurrentView()">🖨️ طباعة الصفحة</button></div>
+<div class="card">
+<h3 id="formTitle">إضافة رحلة جديدة</h3>
+<input type="hidden" id="editIndex">
+<div class="grid">
+<label>رقم السيارة<input id="carNo" placeholder="مثلاً: 12-34567" oninput="autoFillDriverByCar()" onblur="autoFillDriverByCar()"></label>
+<label>البيان الأردني<input id="jordanStNo" placeholder="رقم البيان الأردني"></label>
+<label>البيان الإسرائيلي<input id="israelStNo" placeholder="رقم البيان الإسرائيلي"></label>
+<label>اسم السائق<input id="driver" placeholder="اسم السائق"></label>
+<label>اسم الزبون<input id="customer" placeholder="اسم الزبون"></label>
+<label>نوع البلاستك<input id="plastic" placeholder="مثلاً: PP, PE, حبيبات"></label>
+<label>Batch Number<input id="batchNo" placeholder="رقم الباتش"></label>
+    <label>رقم الفاتورة<input id="invoiceNo" placeholder="رقم الفاتورة"></label>
+<label>موقع التفريغ<input id="unloadLocation" placeholder="مثلاً: المصنع / المستودع"></label>
+<label>عطل السيارة (رقم)<input id="carFault" type="number" step="any" placeholder="مثلاً: 50"></label>
+<label>الوزن (طن / كغم)<input id="weight" type="number" step="any"></label>
+<label>تاريخ التحميل<input id="loadDate" type="date" onchange="updateStayDays()"></label>
+<label>تاريخ التفريغ<input id="unloadDate" type="date" onchange="updateStayDays()"></label>
+<label>مدة البقاء على الجسر<div id="stayDays" style="padding:10px;margin-top:5px;background:#eef5f9;border-radius:8px;font-weight:bold">—</div></label>
+<label>أجار السيارة<input id="rent" type="number"></label>
+<label>مصاريف إضافية<input id="expenses" type="number"></label>
+<label>تاريخ الوصول<input id="date" type="date"></label>
+<label>حالة الرحلة والتفريغ<select id="status" onchange="statusChanged()">
+<option value="في الساحه لوجستيه">في الساحه لوجستيه</option>
+
+<option value="في الساحه الجمركيه">في الساحه الجمركيه</option>
+
+<option value="على سرا تفريغ">على سرا تفريغ</option>
+<option value="غادرت">غادرت</option>
+</select></label>
+</div>
+
+<div class="card" style="margin-top:14px;background:#f8fafc">
+<h3>💵 سلف السائق</h3>
+<div class="small">سجل كافة السلف المقدمة للسائق لهذه الرحلة:</div>
+<div id="advances" style="margin-top:10px"></div>
+<button type="button" class="secondary" onclick="addAdvanceRow()">+ إضافة سلفة أخرى</button>
+<div style="margin-top:12px;font-size:15px"><b>إجمالي سلف الرحلة: <span id="advanceTotal" style="color:#b42318">0</span></b></div>
+</div>
+
+<div class="actions" style="margin-top:15px">
+<button class="success" onclick="saveTrip()" style="padding:12px 24px;font-size:16px">💾 حفظ الرحلة</button>
+<button class="secondary" onclick="cancelEdit()" style="padding:12px 20px">إلغاء</button>
+</div>
+</div>
+</section>
+
+<section id="car" class="hidden">
+<div class="actions" style="margin-bottom:10px"><button onclick="printSelectedCars()">🖨️ طباعة السيارات المحددة</button><button class="secondary" onclick="toggleAllCarPrintSelection(true)">☑️ تحديد الكل</button><button class="secondary" onclick="toggleAllCarPrintSelection(false)">⬜ إلغاء التحديد</button></div>
+<div class="card print-filter">
+  <h3>🔎 بحث عن سيارة</h3>
+  <div class="grid">
+    <label>رقم السيارة<input id="cq" placeholder="أدخل رقم السيارة..." oninput="searchCar()"></label>
+    <label>التاريخ<input id="carDateFilter" type="date" onchange="searchCar()"></label>
+    <label>نوع البلاستك<input id="carPlasticFilter" placeholder="مثلاً: PP, PE..." oninput="searchCar()"></label>
+  </div>
+  <div class="actions" style="margin-top:10px"><button class="secondary" onclick="clearCarFilters()">مسح البحث</button></div>
+</div>
+<div id="carOut"></div>
+</section>
+
+<section id="statement" class="hidden">
+<div class="actions" style="margin-bottom:10px"><button onclick="printCurrentView()">🖨️ طباعة بحث البيان</button></div>
+<div class="card print-filter">
+  <h3>📄 بحث عن البيان</h3>
+  <div class="grid">
+    <label>رقم البيان (أردني أو إسرائيلي)<input id="sq" placeholder="أدخل رقم البيان..." oninput="searchStatement()"></label>
+    <label>حالة البيان<select id="statementStatusFilter" onchange="searchStatement()">
+      <option value="">كل الحالات</option>
+      <option value="في الساحه لوجستيه">في الساحه لوجستيه</option>
+      
+      <option value="في الساحه الجمركيه">في الساحه الجمركيه</option>
+      
+      <option value="على سرا تفريغ">على سرا تفريغ</option>
+      <option value="غادرت">غادرت</option>
+    </select></label>
+  </div>
+  <div class="small" style="margin-top:8px">يمكنك البحث برقم البيان أو حسب حالته، ومن النتائج تغيير حالة البيان بالكامل.</div>
+</div>
+<div id="statementOut"></div>
+</section>
+
+
+<section id="orders" class="hidden">
+<div class="actions" style="margin-bottom:10px">
+  <button onclick="printSelectedOpenOrders()">🖨️ طباعة الطلبيات المحددة</button><button class="secondary" onclick="toggleAllOpenOrderPrintSelection(true)">☑️ تحديد الكل</button><button class="secondary" onclick="toggleAllOpenOrderPrintSelection(false)">⬜ إلغاء التحديد</button>
+</div>
+<div class="card">
+  <h3>📦 الطلبات المفتوحة</h3>
+  <p class="small">عند إنشاء طلبية أدخل بيانات الطلب وعدد السيارات فقط. عند إضافة رقم سيارة، تُرحّل السيارة تلقائياً إلى كشف السيارات الموجودة وتُنقص من السيارات المتبقية في الطلبية.</p>
+
+  <div class="card print-form" style="background:#f8fafc;border:1px solid #dbeafe">
+    <h4 id="openOrderFormTitle">➕ إضافة طلبية مفتوحة</h4>
+    <div class="grid">
+      <label>البيان الإسرائيلي<input id="orderIsraelSt" placeholder="رقم البيان الإسرائيلي"></label>
+      <label>اسم الزبون<input id="orderCustomer" placeholder="اسم الزبون"></label>
+      <label>نوع البلاستك<input id="orderPlastic" placeholder="نوع البلاستك"></label>
+      <label>موقع التفريغ<input id="orderUnloadLocation" placeholder="موقع التفريغ"></label>
+      <label>رقم الفاتورة<input id="orderInvoiceNo" placeholder="رقم الفاتورة"></label>
+      <label>الوزن المطلوب (كغم)<input id="orderWeight" type="number" min="0" step="any" placeholder="مثلاً 20000"></label>
+      <label>تاريخ الطلب<input id="orderDate" type="date"></label>
+      <label>عدد السيارات المطلوبة<input id="orderCarCount" type="number" min="1" step="1" placeholder="مثلاً 5"></label>
+    </div>
+    <input type="hidden" id="openOrderEditId" value="">
+    <div class="actions" style="margin-top:10px">
+      <button class="success" id="openOrderSaveBtn" onclick="saveOpenOrder()">💾 حفظ الطلبية</button>
+      <button class="secondary" onclick="clearOpenOrderForm()">مسح</button>
+    </div>
+  </div>
+
+  <div id="openOrdersOut"></div>
+</div>
+</section>
+
+<section id="all" class="hidden">
+<div class="actions" style="margin-bottom:10px"><button onclick="printCurrentView()">🖨️ طباعة كشف كل الرحلات</button></div>
+<div class="card">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:10px">
+    <h3 style="margin:0">📋 سجل كل الرحلات</h3>
+    <div class="actions">
+      <button class="success" onclick="exportCSV()">📥 تصدير إلى Excel / CSV</button>
+      <input id="backupFileInput" type="file" accept=".json" class="hidden" onchange="overwriteBackupFile(event)">
+      <button onclick="restoreData()">📤 استرجاع نسخة</button>
+    </div>
+  </div>
+  <div id="allOut"></div>
+</div>
+</section>
+
+
+<section id="unloaded" class="hidden">
+  <div class="actions" style="margin-bottom:10px"><button onclick="printCurrentView()">🖨️ طباعة كشف المفرغات</button><button class="success" onclick="moveAllUnloadedToDeparted()">🚪 نقل كل المفرغات إلى كشف المغادره</button></div>
+  <div class="card">
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:10px">
+      <h3 style="margin:0">🚛 كشف السيارات التي تم تفريغها</h3>
+      <button class="success" onclick="exportUnloadedCSV()">📥 تصدير كشف المفرغات</button>
+    </div>
+    <div class="grid">
+      <div class="card">عدد السيارات المفرغة<div id="unloadedCount" class="stat">0</div></div>
+      <div class="card">إجمالي الأجار<div id="unloadedRent" class="stat">0</div></div>
+      <div class="card">إجمالي السلف<div id="unloadedAdvances" class="stat">0</div></div>
+      <div class="card">إجمالي المصاريف<div id="unloadedExpenses" class="stat">0</div></div>
+      <div class="card">إجمالي مصاريف الأعطال<div id="unloadedFaultTotal" class="stat">0</div></div>
+      <div class="card">إجمالي مدة البقاء على الجسر<div id="unloadedStay" class="stat">0</div></div>
+      <div class="card">إجمالي الحساب النهائي لجميع السيارات المفرغة<div id="unloadedFinalTotal" class="stat">0</div></div>
+    </div>
+    <div id="unloadedOut"></div>
+  </div>
+</section>
+
+<section id="available" class="hidden">
+  <div class="actions" style="margin-bottom:10px">
+    <button onclick="printCurrentView()">🖨️ طباعة كشف السيارات الموجودة</button>
+    <button class="success" onclick="exportAvailableCSV()">📥 تصدير الكشف</button>
+  <label class="print-filter">بحث برقم الفاتورة<input id="availableInvoiceSearch" placeholder="رقم الفاتورة" oninput="renderAvailable()"></label></div>
+  <div class="card">
+    <h3>🚛 كشف السيارات الموجودة حالياً</h3>
+    <p class="small">يعرض فقط السيارات التي لم يتم تفريغها ولم تغادر.</p>
+    <div class="grid">
+      <div class="card">عدد السيارات الموجودة<div id="availableCount" class="stat">0</div></div>
+      <div class="card">مجموع الأجار<div id="availableRent" class="stat">0</div></div>
+    </div>
+    <div id="availableOut"></div>
+  </div>
+</section>
+
+<section id="departed" class="hidden">
+<div class="actions" style="margin-bottom:10px"><button onclick="printCurrentView()">🖨️ طباعة كشف السيارات التي غادرت</button></div>
+<div class="card">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:10px">
+    <h3 style="margin:0">🚪 كشف السيارات التي غادرت</h3>
+    <button class="success" onclick="exportDepartedCSV()">📥 تصدير الكشف</button>
+  </div>
+  <div class="grid">
+    <div class="card">عدد السيارات<div id="departedCount" class="stat">0</div></div>
+    <div class="card">مجموع الأجار<div id="departedRent" class="stat">0</div></div>
+  </div>
+  <div id="departedOut"></div>
+</div>
+</section>
+
+<section id="loadedSearch" class="hidden">
+<div class="actions" style="margin-bottom:10px"><button onclick="printCurrentView()">🖨️ طباعة بحث التحميل</button></div>
+<div class="card print-filter">
+<h3>📦 بحث سيارات التحميل</h3>
+<div class="grid">
+<label>البيان الأردني<input id="loadSearchJordan" placeholder="رقم البيان الأردني" oninput="searchLoadedByDate()"></label>
+<label>البيان الإسرائيلي<input id="loadSearchIsrael" placeholder="رقم البيان الإسرائيلي" oninput="searchLoadedByDate()"></label>
+<label>رقم السيارة<input id="loadSearchCar" placeholder="رقم السيارة" oninput="searchLoadedByDate()"></label>
+<label>نوع البلاستك<input id="loadSearchPlastic" placeholder="نوع البلاستك" oninput="searchLoadedByDate()"></label>
+<label>حالة البيان<select id="loadSearchStatus" onchange="searchLoadedByDate()">
+<option value="">كل الحالات</option>
+<option value="في الساحه لوجستيه">في الساحه لوجستيه</option>
+
+<option value="في الساحه الجمركيه">في الساحه الجمركيه</option>
+
+<option value="على سرا تفريغ">على سرا تفريغ</option>
+<option value="غادرت">غادرت</option>
+</select></label>
+<label>تاريخ التحميل<input id="loadSearchDate" type="date" onchange="searchLoadedByDate()"></label>
+<label>Batch Number<input id="loadSearchBatch" placeholder="مثلاً: 12345" oninput="searchLoadedByDate()"></label>
+<label>موقع التفريغ<input id="loadSearchLocation" placeholder="مثلاً: شيخ حسين أو وادي عربه" oninput="searchLoadedByDate()"></label>
+<label>رقم الفاتورة<input id="loadSearchInvoice" placeholder="رقم الفاتورة" oninput="searchLoadedByDate()"></label>
+</div>
+<label style="display:inline-flex;align-items:center;gap:6px;margin:8px 0"><input id="loadSearchNoIsrael" type="checkbox" onchange="searchLoadedByDate()"> 🔎 سيارات بدون بيان إسرائيلي</label><div class="actions" style="margin-top:10px">
+<button onclick="showTodayLoaded()">📅 تحميل اليوم</button>
+<button class="secondary" onclick="toggleAllLoadedStatementPrint(true)">☑️ تحديد كل البيانات للطباعة</button>
+<button class="secondary" onclick="toggleAllLoadedStatementPrint(false)">⬜ إلغاء التحديد</button>
+<button class="success" onclick="printSelectedLoadedStatements()">🖨️ طباعة البيانات المحددة</button>
+<button class="secondary" onclick="clearLoadedSearch()">مسح البحث</button>
+</div>
+</div>
+<div id="loadedSearchOut"></div>
+</section>
+
+<section id="dailyExpenses" class="hidden">
+<div class="actions" style="margin-bottom:10px"><button onclick="printCurrentView()">🖨️ طباعة كشف المصاريف</button></div>
+<div class="card">
+<h3 class="print-filter">💰 حساب المصاريف حسب التاريخ</h3>
+<div class="grid print-filter">
+<label>اختر التاريخ<input id="dailyExpenseDate" type="date" onchange="renderDailyExpenses()"></label>
+<label>بحث برقم السيارة أو البيان<input id="dailyExpenseSearch" placeholder="رقم السيارة / البيان الأردني / البيان الإسرائيلي" oninput="renderDailyExpenses()"></label>
+</div>
+<div class="small" style="margin-top:8px">اترك خانة البحث فارغة لعرض كل سيارات اليوم، أو اكتب رقم سيارة أو رقم بيان لعرض السيارات والحسابات المرتبطة به.</div>
+<div id="dailyExpensesOut"></div>
+</div>
+</section>
+
+<section id="warehouse" class="hidden">
+<div class="actions" style="margin-bottom:10px"><button onclick="printCurrentView()">🖨️ طباعة كشف المخزن</button></div>
+<div class="card">
+  <h3>📦 المخزن</h3>
+  <p class="small">سجّل البضاعة عند وصولها، وعند ترحيل سيارة من طلبية مرتبطة بفاتورة يتم خصم الوزن منها تلقائياً. عند وصول الرصيد إلى صفر تنتقل الفاتورة إلى سجل الفواتير المكتملة ولا تبقى ضمن الرصيد الحالي.</p>
+  <div class="card" style="background:#f8fafc;border:1px solid #dbeafe">
+    <h4 id="warehouseFormTitle">➕ إضافة بضاعة للمخزن</h4>
+    <div class="grid">
+      <label>اسم الصنف<input id="warehouseItem" placeholder="اسم الصنف"></label>
+      <label>رقم الفاتورة<input id="warehouseInvoice" placeholder="رقم الفاتورة"></label>
+      <label>الكمية<input id="warehouseQty" type="number" min="0" step="any" placeholder="الكمية"></label>
+      <label>الوزن (كغم)<input id="warehouseWeight" type="number" min="0" step="any" placeholder="الوزن"></label>
+      <label>تاريخ الوصول<input id="warehouseDate" type="date"></label>
+      <label style="grid-column:1/-1">ملاحظات الفاتورة<textarea id="warehouseNotes" rows="2" placeholder="اكتب ملاحظات خاصة بهذه الفاتورة"></textarea></label>
+    </div>
+    <input type="hidden" id="warehouseEditId" value="">
+    <div class="actions" style="margin-top:10px"><button class="success" onclick="saveWarehouseItem()">💾 حفظ</button><button class="secondary" onclick="clearWarehouseForm()">مسح</button></div>
+  </div>
+  <div class="card print-filter" style="margin-top:12px"><label>🔎 بحث برقم الفاتورة في المخزن<input id="warehouseSearchInvoice" placeholder="أدخل رقم الفاتورة" oninput="renderWarehouse()"></label></div>
+  <div id="warehouseOut"></div>
+  <div id="warehouseCompletedOut" style="margin-top:14px"></div>
+</div>
+</section>
+
+<section id="install" class="hidden">
+<div class="actions" style="margin-bottom:10px"><button onclick="printCurrentView()">🖨️ طباعة الصفحة</button></div>
+<div class="card">
+  <h3>📱 كيفية تثبيت التطبيق على آيفون (iOS)</h3>
+  <div class="banner">
+    <b>طريقة التثبيت لتصبح مثل أي تطبيق رسمي:</b>
+    <ol>
+      <li>افتح هذا الملف أو الرابط باستخدام متصفح <b>Safari</b> على الآيفون.</li>
+      <li>اضغط على زر <b>المشاركة (Share)</b> 📤 في أسفل الشاشة.</li>
+      <li>اختر من القائمة <b>"إضافة إلى الشاشة الرئيسية" (Add to Home Screen)</b>.</li>
+      <li>اضغط <b>إضافة (Add)</b> في الأعلى. وسيظهر التطبيق فوراً على شاشة هاتفك بأيقونة مستقلة!</li>
+    </ol>
+  </div>
+</div>
+
+<div class="card">
+  <h3>💻 كيفية تثبيت التطبيق على ويندوز (Windows)</h3>
+  <div class="banner" style="background:#f0fdf4;border-color:#bbf7d0;color:#166534">
+    <b>طريقة التثبيت على الكمبيوتر:</b>
+    <ol>
+      <li>افتح الملف باستخدام متصفح <b>Google Chrome</b> أو <b>Microsoft Edge</b>.</li>
+      <li>ستلاحظ أداة تثبيت في شريط العنوان بالأعلى 🖥️ أو اضغط على القائمة (الثلاث نقاط).</li>
+      <li>اختر <b>"تثبيت التطبيق" (Install App)</b> أو <b>"Create Shortcut"</b> واعلم على خيار "Open as window".</li>
+      <li>سيعمل التطبيق كنافذة مستقلة وسريعة على سطح المكتب!</li>
+    </ol>
+  </div>
+</div>
+</section>
+
+</main>
+
+<script>
+function printCurrentView(){
+  trips = trips.map(t => ({...t, status: normalizeStatusValue(t.status)}));
+  const sections = [...document.querySelectorAll('main > section')];
+  const current = sections.find(s => !s.classList.contains('hidden'));
+  if(!current) return;
+
+  // تحديث محتوى الصفحة قبل الطباعة.
+  if(current.id === 'home') update();
+  if(current.id === 'all') renderAll();
+  if(current.id === 'unloaded') renderUnloaded();
+  if(current.id === 'available') renderAvailable();
+  if(current.id === 'departed') renderDeparted();
+  if(current.id === 'car') {
+    if(cq.value.trim() || (document.getElementById('carDateFilter')?.value) || (document.getElementById('carPlasticFilter')?.value)) searchCar();
+    else carOut.innerHTML = '<div class="card"><h3>بحث عن سيارة</h3><p>لم يتم إدخال رقم سيارة للبحث.</p></div>';
+  }
+  if(current.id === 'orders') renderOpenOrders();
+  if(current.id === 'statement') {
+    if(sq.value.trim()) searchStatement();
+    else statementOut.innerHTML = '<div class="card"><h3>بحث عن بيان</h3><p>لم يتم إدخال رقم بيان للبحث.</p></div>';
+  }
+  if(current.id === 'loadedSearch') searchLoadedByDate();
+  if(current.id === 'dailyExpenses') renderDailyExpenses();
+
+  sections.forEach(s => s.classList.remove('printing'));
+  current.classList.add('printing');
+
+  setTimeout(() => {
+    window.print();
+  }, 100);
+
+  window.onafterprint = () => {
+    current.classList.remove('printing');
+    window.onafterprint = null;
+  };
+}
+
+let trips = JSON.parse(localStorage.getItem('sheikh_hussein_trips') || '[]');
+
+// Ensure older saved records have the new fields without changing their data.
+trips = trips.map(t => ({
+  ...t,
+  batchNo: t.batchNo || '',
+  unloadLocation: t.unloadLocation || '',
+  carFault: +t.carFault || 0,
+  customer: t.customer || '',
+  warehouseDeducted: !!t.warehouseDeducted,
+  warehouseDeductedWeight: +t.warehouseDeductedWeight || 0
+}));
+
+// الطلبات المفتوحة مستقلة عن السيارات، ولا تدخل في كشوف السيارات إلا بعد ترحيلها.
+let openOrders = JSON.parse(localStorage.getItem('sheikh_hussein_open_orders') || '[]');
+let warehouse = JSON.parse(localStorage.getItem('sheikh_hussein_warehouse') || '[]');
+let warehouseCompleted = JSON.parse(localStorage.getItem('sheikh_hussein_warehouse_completed') || '[]');
+openOrders = openOrders.map(o => ({
+  ...o,
+  israelSt: o.israelSt || '',
+  customer: o.customer || '',
+  plastic: o.plastic || '',
+  unloadLocation: o.unloadLocation || '',
+  date: o.date || today(),
+  carCount: Math.max(0, +(o.carCount ?? o.cars?.length ?? 0) || 0),
+  cars: Array.isArray(o.cars) ? o.cars : [],
+  orderNo: o.orderNo || null
+}));
+
+function money(x){ return (+x || 0).toLocaleString('ar', {maximumFractionDigits:2}); }
+function today(){ return new Date().toISOString().slice(0,10); }
+function totalAdvances(t){ return (t.advances || []).reduce((s,x) => s + (+x.amount || 0), 0); }
+function normalizeStatusValue(s){
+  const v=String(s||'').trim().replace(/\s+/g,' ');
+  if(v==='في الساحة' || v==='في الساحه لوجستيه') return 'في الساحه لوجستيه';
+  if(v==='جاهزة للمعبر' || v==='في الساحه الجمركيه') return 'في الساحه الجمركيه';
+  if(v==='تم التفريغ' || v==='فرغت' || v==='مفرغة' || v==='مفرغ' || v==='على سرا تفريغ') return 'على سرا تفريغ';
+  if(v==='غادرت') return 'غادرت';
+  return 'في الساحه لوجستيه';
+}
+
+// توحيد الحالات في جميع الكشوفات والبيانات القديمة والجديدة
+trips = trips.map(t => ({...t, status: normalizeStatusValue(t.status)}));
+
+function isUnloaded(t){
+  return normalizeStatusValue(t.status) === 'على سرا تفريغ';
+}
+function activeTripsCount(){
+  return trips.filter(isCurrentlyAvailable).length;
+}
+
+function getAvailableTrips(){
+  return trips.filter(t => !isUnloaded(t) && normalizeStatusValue(t.status) !== 'غادرت');
+}
+
+function calcStayDays(load, unload){
+  if(!load || !unload) return null;
+  const a = new Date(load + 'T00:00:00'), b = new Date(unload + 'T00:00:00');
+  const d = Math.round((b - a) / 86400000);
+  return d >= 0 ? d : null;
+}
+
+
+function netAccountWithoutRent(t){
+  // إجمالي الحساب = صافي حساب العطل + المصاريف - السلف
+  // الأجار لا يدخل في إجمالي الحساب.
+  return faultAmount(t) + (+t.expenses || 0) - totalAdvances(t);
+}
+
+function faultAmount(t){
+  const days = calcStayDays(t.loadDate, t.unloadDate);
+  const fault = +t.carFault || 0;
+  // مثال: 10 أيام على الجسر - يوم واحد = 9 × عطل 50 = 450
+  if(days === null || days <= 1 || fault <= 0) return 0;
+  return (days - 1) * fault;
+}
+
+function stayText(d){
+  if(d === null) return '—';
+  if(d === 0) return 'نفس اليوم';
+  return d + ' ' + (d === 1 ? 'يوم' : d === 2 ? 'يومين' : 'أيام');
+}
+
+function updateStayDays(){
+  const d = calcStayDays(loadDate.value, unloadDate.value);
+  stayDays.textContent = stayText(d);
+}
+
+function createAutoBackup(){
+  const now = new Date().toISOString();
+  const backup = {
+    backupVersion: 2,
+    savedAt: now,
+    trips: (typeof trips !== 'undefined' ? trips : []),
+    openOrders: (typeof openOrders !== 'undefined' ? openOrders : []),
+    masterCars: (typeof getMasterCars === 'function' ? getMasterCars() : []),
+    warehouse: (typeof warehouse !== 'undefined' ? warehouse : []),
+    warehouseCompleted: (typeof warehouseCompleted !== 'undefined' ? warehouseCompleted : [])
+  };
+  // نسخة واحدة فقط داخل التطبيق؛ كل حفظ يستبدل النسخة السابقة ولا ينشئ نسخة جديدة.
+  localStorage.setItem('sheikh_hussein_auto_backup', JSON.stringify(backup));
+  localStorage.setItem('sheikh_hussein_auto_backup_time', now);
+  localStorage.setItem('sheikh_hussein_last_update', now);
+  autoWriteBackupFile(backup);
+}
+
+let autoBackupFileHandle = null;
+let autoBackupFileReady = false;
+
+async function chooseAutoBackupFile(){
+  if(!window.showSaveFilePicker) {
+    alert('الحفظ التلقائي إلى ملف واحد غير مدعوم في هذا المتصفح. سيتم الاحتفاظ بالنسخة تلقائياً داخل التطبيق. يمكنك استخدام زر حفظ نسخة احتياطية لتنزيل ملف واحد.');
+    return;
+  }
+  try {
+    autoBackupFileHandle = await window.showSaveFilePicker({
+      suggestedName: 'نسخة_احتياطية_سيارات_الشيخ_حسين.json',
+      types: [{description:'ملف نسخة احتياطية JSON',accept:{'application/json':['.json']}}]
+    });
+    autoBackupFileReady = true;
+    const backup = {backupVersion:2,savedAt:new Date().toISOString(),trips:trips,openOrders:openOrders,masterCars:getMasterCars(),warehouse:warehouse,warehouseCompleted:warehouseCompleted};
+    await autoWriteBackupFile(backup);
+    alert('تم اختيار ملف النسخة الاحتياطية. من الآن سيتم تحديث نفس الملف تلقائياً بدون إنشاء ملفات متكررة.');
+  } catch(e) {}
+}
+
+async function autoWriteBackupFile(backup){
+  if(!autoBackupFileReady || !autoBackupFileHandle) return;
+  try {
+    const writable = await autoBackupFileHandle.createWritable();
+    await writable.write(JSON.stringify(backup,null,2));
+    await writable.close();
+  } catch(e) {
+    autoBackupFileReady = false;
+  }
+}
+
+function save(){
+  const data = JSON.stringify(trips);
+  const ordersData = JSON.stringify(openOrders);
+  const warehouseData = JSON.stringify(warehouse);
+  const warehouseCompletedData = JSON.stringify(warehouseCompleted);
+  localStorage.setItem('sheikh_hussein_trips', data);
+  localStorage.setItem('sheikh_hussein_open_orders', ordersData);
+  localStorage.setItem('sheikh_hussein_warehouse', warehouseData);
+  localStorage.setItem('sheikh_hussein_warehouse_completed', warehouseCompletedData);
+  createAutoBackup();
+  localStorage.setItem('sheikh_hussein_trips', data);
+  localStorage.setItem('sheikh_hussein_open_orders', ordersData);
+  localStorage.setItem('sheikh_hussein_warehouse', warehouseData);
+  localStorage.setItem('sheikh_hussein_warehouse_completed', warehouseCompletedData);
+  localStorage.setItem('sheikh_hussein_auto_backup', JSON.stringify({trips: trips, openOrders: openOrders}));
+  localStorage.setItem('sheikh_hussein_auto_backup_time', new Date().toISOString());
+  update();
+  // تحديث سريع لكل الكشوف المفتوحة بعد أي إضافة أو تعديل
+  refreshViews();
+
+  // إعادة رسم كشف المفرغات مباشرة بعد الحفظ حتى يظهر تغيير الحالة فوراً
+  if(!document.getElementById('orders').classList.contains('hidden')) renderOpenOrders();
+  if(!document.getElementById('unloaded').classList.contains('hidden')){
+    renderUnloaded();
+  }
+}
+
+function driverForTrip(t){
+  const car=String(t?.car||'').trim();
+  if(!car) return String(t?.driver||'');
+  const master=getMasterCars().find(x=>String(x.car||'').trim()===car);
+  return master ? String(master.driver||'') : String(t?.driver||'');
+}
+function getMasterCars(){try{return JSON.parse(localStorage.getItem("masterCars")||"[]")}catch(e){return []}}
+
+function refreshAllVehicleViews(){
+  try{ if(typeof renderAvailable==='function') renderAvailable(); }catch(e){}
+  try{ if(typeof renderUnloaded==='function') renderUnloaded(); }catch(e){}
+  try{ if(typeof renderDeparted==='function') renderDeparted(); }catch(e){}
+  try{ if(typeof renderAll==='function') renderAll(); }catch(e){}
+  try{ if(typeof renderHome==='function') renderHome(); }catch(e){}
+  try{ if(typeof searchCar==='function' && document.getElementById('carSearch')?.value) searchCar(); }catch(e){}
+}
+function saveMasterCar(){
+  const c=(document.getElementById("masterCarNo").value||"").trim();
+  const d=(document.getElementById("masterDriver").value||"").trim();
+  const editIndex=parseInt(document.getElementById("masterEditIndex")?.value||"-1",10);
+  if(!c||!d) return alert("أدخل رقم السيارة ورقم/اسم السائق.");
+  let a=getMasterCars();
+  const existsIndex=a.findIndex(v=>String(v.car||"").trim()===c);
+  if(editIndex>=0){
+    if(existsIndex>=0 && existsIndex!==editIndex) return alert("⚠️ رقم السيارة ("+c+") موجود مسبقاً.");
+    a[editIndex]={car:c,driver:d};
+    localStorage.setItem("masterCars",JSON.stringify(a));
+    cancelMasterEdit();
+    renderMasterCars(); searchMasterCar();
+    alert("✅ تم تعديل بيانات السيارة والسائق.");
+    return;
+  }
+  if(existsIndex>=0){
+    document.getElementById("masterCarNo").focus();
+    return alert("⚠️ رقم السيارة ("+c+") موجود مسبقاً. ابحث عنه ثم اضغط تعديل لتغيير بياناته.");
+  }
+  a.push({car:c,driver:d});
+  localStorage.setItem("masterCars",JSON.stringify(a));
+  document.getElementById("masterCarNo").value="";
+  document.getElementById("masterDriver").value="";
+  renderMasterCars(); searchMasterCar();
+  alert("✅ تمت إضافة السيارة رقم "+c+" مع بيانات السائق بنجاح.");
+}
+function editMasterCar(index){
+  const a=getMasterCars(), x=a[index]; if(!x)return;
+  document.getElementById("masterCarNo").value=x.car||"";
+  document.getElementById("masterDriver").value=x.driver||"";
+  document.getElementById("masterEditIndex").value=index;
+  document.getElementById("masterFormTitle").textContent="✏️ تعديل السيارة والسائق";
+  document.getElementById("masterSaveBtn").textContent="💾 حفظ التعديل";
+  document.getElementById("masterCancelBtn").classList.remove("hidden");
+  document.getElementById("masterCarNo").focus();
+}
+function cancelMasterEdit(){
+  document.getElementById("masterCarNo").value="";
+  document.getElementById("masterDriver").value="";
+  document.getElementById("masterEditIndex").value="-1";
+  document.getElementById("masterFormTitle").textContent="➕ إضافة سيارة وسائق";
+  document.getElementById("masterSaveBtn").textContent="➕ إضافة";
+  document.getElementById("masterCancelBtn").classList.add("hidden");
+}
+function searchMasterCar(){
+  const out=document.getElementById('masterCarSearchOut');
+  const q=(document.getElementById('masterCarSearch')?.value||'').trim();
+  if(!out)return;
+  if(!q){out.innerHTML='';return;}
+  const found=getMasterCars().filter(x=>String(x.car||'').trim().includes(q));
+  if(!found.length){out.innerHTML='<div class="card" style="margin-top:10px">❌ لا توجد سيارة بهذا الرقم.</div>';return;}
+  let h='<div class="table-wrapper" style="margin-top:10px"><table><tr><th>رقم السيارة</th><th>رقم/اسم السائق</th><th>إجراء</th></tr>';
+  found.forEach(x=>{const i=getMasterCars().indexOf(x);h+='<tr><td><b>'+escapeHtml(x.car)+'</b></td><td>'+escapeHtml(x.driver||'')+'</td><td><button class="secondary" onclick="editMasterCar('+i+')">✏️ تعديل</button></td></tr>';});
+  out.innerHTML=h+'</table></div>';
+}
+function renderMasterCars(){const o=document.getElementById("masterCarsOut");if(!o)return;let a=getMasterCars();o.innerHTML=a.length?'<div class="table-wrapper"><table><tr><th>#</th><th>السيارة</th><th>السائق</th><th>إجراء</th></tr>'+a.map((x,i)=>'<tr><td>'+(i+1)+'</td><td><b>'+escapeHtml(x.car)+'</b></td><td>'+escapeHtml(x.driver)+'</td><td><button class="secondary" onclick="editMasterCar('+i+')">✏️ تعديل</button></td></tr>').join('')+'</table></div>':'<p>لا توجد سيارات محفوظة.</p>'}
+
+function syncMasterDriverToTrip(t){
+  if(!t) return t;
+  const master=getMasterCars().find(x=>String(x.car||'').trim()===String(t.car||'').trim());
+  if(master) t.driver=master.driver||'';
+  return t;
+}
+function autoFillDriverByCar(){const c=(document.getElementById("carNo")?.value||"").trim(),e=document.getElementById("driver");if(!e)return;const x=getMasterCars().find(v=>v.car===c);if(x)e.value=x.driver}
+function show(id){
+  document.querySelectorAll('main > section').forEach(s => s.classList.add('hidden'));
+  document.getElementById(id).classList.remove('hidden');
+
+  // تحديث البيانات فور فتح أي كشف، خصوصاً كشف السيارات المفرغة
+  if(id === 'home') update();
+  if(id === 'all') renderAll();
+  if(id === 'unloaded') renderUnloaded();
+  if(id === 'available') renderAvailable();
+  if(id === 'departed') renderDeparted();
+  if(id === 'car' && (cq.value.trim() || carDateFilter.value || carPlasticFilter.value)) searchCar();
+  if(id === 'statement' && sq.value.trim()) searchStatement();
+  if(id === 'orders') renderOpenOrders();
+  if(id === 'loadedSearch' && loadSearchDate.value) searchLoadedByDate();
+  if(id === 'dailyExpenses') renderDailyExpenses();
+}
+
+
+let quickSaveTimer=null;
+function quickAutoRefresh(){
+  clearTimeout(quickSaveTimer);
+  quickSaveTimer=setTimeout(()=>{
+    try {
+      const now=new Date().toISOString();
+      localStorage.setItem('sheikh_hussein_trips', JSON.stringify(trips));
+      localStorage.setItem('sheikh_hussein_open_orders', JSON.stringify(openOrders));
+      localStorage.setItem('sheikh_hussein_warehouse', JSON.stringify(warehouse));
+      localStorage.setItem('sheikh_hussein_warehouse_completed', JSON.stringify(warehouseCompleted));
+      createAutoBackup();
+      update(); refreshViews();
+      if(!document.getElementById('orders').classList.contains('hidden')) renderOpenOrders();
+    } catch(e) {}
+  },80);
+}
+
+// تحديث فوري عند تغيير البيانات من نافذة/تبويب آخر على نفس الجهاز.
+window.addEventListener('storage', e=>{
+  if(!['sheikh_hussein_trips','sheikh_hussein_open_orders','sheikh_hussein_warehouse','sheikh_hussein_warehouse_completed'].includes(e.key)) return;
+  try{
+    if(e.key==='sheikh_hussein_trips') trips=JSON.parse(e.newValue||'[]');
+    if(e.key==='sheikh_hussein_open_orders') openOrders=JSON.parse(e.newValue||'[]');
+    if(e.key==='sheikh_hussein_warehouse') warehouse=JSON.parse(e.newValue||'[]');
+    if(e.key==='sheikh_hussein_warehouse_completed') warehouseCompleted=JSON.parse(e.newValue||'[]');
+    syncWarehouseFromTrips();
+    update(); refreshViews();
+    if(!document.getElementById('orders').classList.contains('hidden')) renderOpenOrders();
+  }catch(err){}
+});
+
+document.addEventListener('input', e=>{
+  if(e.target && e.target.closest('main')) quickAutoRefresh();
+});
+document.addEventListener('change', e=>{
+  if(e.target && e.target.closest('main')) quickAutoRefresh();
+});
+
+function resetForm(){
+  editIndex.value = '';
+  formTitle.textContent = 'إضافة رحلة جديدة';
+  carNo.value = ''; jordanStNo.value = ''; israelStNo.value = ''; driver.value = ''; customer.value = ''; plastic.value = ''; batchNo.value = ''; invoiceNo.value = ''; unloadLocation.value = ''; carFault.value = '';
+  weight.value = ''; rent.value = ''; expenses.value = ''; date.value = today();
+  loadDate.value = ''; unloadDate.value = ''; stayDays.textContent = '—';
+  status.value = 'في الساحه لوجستيه';
+  advances.innerHTML = '';
+  addAdvanceRow();
+}
+
+function addAdvanceRow(data = {amount:'', date:today(), note:''}){
+  const row = document.createElement('div');
+  row.className = 'advance-row';
+  row.innerHTML =
+    '<label>المبلغ<input class="advAmount" type="number" value="' + (data.amount ?? '') + '" oninput="updateAdvanceTotal()"></label>' +
+    '<label>التاريخ<input class="advDate" type="date" value="' + (data.date || today()) + '"></label>' +
+    '<label>الملاحظة<input class="advNote" value="' + escapeHtml(data.note || '') + '" placeholder="مثلاً سلفة أولى"></label>' +
+    '<button type="button" class="danger" onclick="this.parentElement.remove();updateAdvanceTotal()">حذف</button>';
+  advances.appendChild(row);
+  updateAdvanceTotal();
+}
+
+function updateAdvanceTotal(){
+  let sum = 0;
+  document.querySelectorAll('.advAmount').forEach(x => sum += (+x.value || 0));
+  advanceTotal.textContent = money(sum);
+}
+
+function getAdvances(){
+  return [...document.querySelectorAll('#advances .advance-row')].map(row => ({
+    amount: +row.querySelector('.advAmount').value || 0,
+    date: row.querySelector('.advDate').value || today(),
+    note: row.querySelector('.advNote').value.trim()
+  })).filter(x => x.amount > 0);
+}
+
+function statusChanged(){
+  const st=document.getElementById('status');
+  const ud=document.getElementById('unloadDate');
+  if(st && ud && isUnloaded({status:st.value}) && !ud.value) ud.value=today();
+  update();
+  if(cq.value.trim() && !document.getElementById('car').classList.contains('hidden')) searchCar();
+  if(sq.value.trim() && !document.getElementById('statement').classList.contains('hidden')) searchStatement();
+  if(!document.getElementById('all').classList.contains('hidden')) renderAll();
+  if(!document.getElementById('unloaded').classList.contains('hidden')) renderUnloaded();
+  if(!document.getElementById('available').classList.contains('hidden')) renderAvailable();
+  if(!document.getElementById('departed').classList.contains('hidden')) renderDeparted();
+}
+
+
+function refreshViews(){
+  update();
+  if(cq.value.trim() || (document.getElementById('carDateFilter')?.value) || (document.getElementById('carPlasticFilter')?.value)) searchCar();
+  if(sq.value.trim()) searchStatement();
+  if(!document.getElementById('all').classList.contains('hidden')) renderAll();
+  if(!document.getElementById('unloaded').classList.contains('hidden')) renderUnloaded();
+  if(!document.getElementById('available').classList.contains('hidden')) renderAvailable();
+  if(!document.getElementById('departed').classList.contains('hidden')) renderDeparted();
+}
+
+function saveTrip(){
+  const t = {
+    car: carNo.value.trim(),
+    jordanSt: jordanStNo.value.trim(),
+    israelSt: israelStNo.value.trim(),
+    statement: jordanStNo.value.trim(),
+    orderId: '', orderNo: '',
+    driver: driver.value.trim(),
+    customer: document.getElementById('customer') ? document.getElementById('customer').value.trim() : '',
+    plastic: plastic.value.trim(),
+    batchNo: batchNo.value.trim(),
+    invoiceNo: invoiceNo.value.trim(),
+    unloadLocation: unloadLocation.value.trim(),
+    carFault: +carFault.value || 0,
+    weight: +weight.value || 0,
+    loadDate: loadDate.value || '',
+    unloadDate: unloadDate.value || '',
+    rent: +rent.value || 0,
+    advances: getAdvances(),
+    expenses: +expenses.value || 0,
+    date: date.value,
+    status: normalizeStatusValue(document.getElementById('status').value)
+  };
+  if(isUnloaded(t) && !t.unloadDate) t.unloadDate = today();
+
+  if(!t.car){
+    return alert('يرجى إدخال رقم السيارة على الأقل');
+  }
+
+  const idx = editIndex.value;
+
+  // عند إضافة رحلة عادية برقم فاتورة، يتم خصم وزن الرحلة تلقائياً من المخزن،
+  // بنفس آلية ترحيل السيارة من الطلبات المفتوحة.
+  if(idx === '' && t.invoiceNo){
+    const inv = String(t.invoiceNo).trim();
+    const matches = warehouse.filter(w => String(w.invoiceNo || '').trim() === inv);
+    const availableWeight = matches.reduce((sum,w) => sum + (+w.remainingWeight || 0), 0);
+    if(!matches.length) return alert('رقم الفاتورة '+inv+' غير موجود في المخزن.');
+    if((+t.weight || 0) <= 0) return alert('أدخل وزن السيارة حتى يتم خصمه من المخزن.');
+    if((+t.weight || 0) > availableWeight + 0.000001) return alert('وزن الرحلة '+t.weight+' كغم أكبر من المتبقي في المخزن لهذه الفاتورة: '+availableWeight+' كغم.');
+
+    let left = +t.weight || 0;
+    for(const w of matches){
+      const take = Math.min(left, +w.remainingWeight || 0);
+      w.remainingWeight = Math.max(0, (+w.remainingWeight || 0) - take);
+      w.usedWeight = (+w.usedWeight || 0) + take;
+      w.lastUsedDate = today();
+      if(w.remainingWeight <= 0.000001) w.remainingWeight = 0;
+      left -= take;
+      if(left <= 0.000001) break;
+    }
+    warehouse = warehouse.filter(w => String(w.invoiceNo || '').trim() !== inv || (+w.remainingWeight || 0) > 0);
+    matches.filter(w => (+w.remainingWeight || 0) === 0).forEach(w => {
+      if(!warehouseCompleted.some(c => String(c.id) === String(w.id))){
+        warehouseCompleted.push({...w, completedDate: today(), remainingWeight: 0});
+      }
+    });
+    t.warehouseDeducted = true;
+    t.warehouseDeductedWeight = +t.weight || 0;
+  }
+
+  if(idx !== ''){
+    // الرحلات القديمة التي لم يكن لها خصم من المخزن: إذا كان فيها فاتورة ووزن،
+    // نفّذ الخصم مرة واحدة فقط.
+    const oldTrip = trips[+idx];
+    if(!oldTrip?.warehouseDeducted && t.invoiceNo && (+t.weight || 0) > 0){
+      const inv = String(t.invoiceNo).trim();
+      const matches = warehouse.filter(w => String(w.invoiceNo || '').trim() === inv);
+      const availableWeight = matches.reduce((sum,w) => sum + (+w.remainingWeight || 0), 0);
+      if(!matches.length) return alert('رقم الفاتورة '+inv+' غير موجود في المخزن.');
+      if((+t.weight || 0) > availableWeight + 0.000001) return alert('وزن الرحلة '+t.weight+' كغم أكبر من المتبقي في المخزن لهذه الفاتورة: '+availableWeight+' كغم.');
+      let left = +t.weight || 0;
+      for(const w of matches){
+        const take = Math.min(left, +w.remainingWeight || 0);
+        w.remainingWeight = Math.max(0, (+w.remainingWeight || 0) - take);
+        w.usedWeight = (+w.usedWeight || 0) + take;
+        w.lastUsedDate = today();
+        if(w.remainingWeight <= 0.000001) w.remainingWeight = 0;
+        left -= take;
+        if(left <= 0.000001) break;
+      }
+      warehouse = warehouse.filter(w => String(w.invoiceNo || '').trim() !== inv || (+w.remainingWeight || 0) > 0);
+      matches.filter(w => (+w.remainingWeight || 0) === 0).forEach(w => {
+        if(!warehouseCompleted.some(c => String(c.id) === String(w.id))){ warehouseCompleted.push({...w, completedDate: today(), remainingWeight: 0}); }
+      });
+      t.warehouseDeducted = true;
+      t.warehouseDeductedWeight = +t.weight || 0;
+    } else if(oldTrip?.warehouseDeducted){
+      t.warehouseDeducted = true;
+      t.warehouseDeductedWeight = oldTrip.warehouseDeductedWeight || oldTrip.weight || 0;
+    }
+    trips[+idx] = t;
+    alert('تم تعديل بيانات الرحلة بنجاح');
+  } else {
+    trips.push(t);
+    alert('تم حفظ الرحلة بنجاح');
+  }
+
+  syncWarehouseFromTrips();
+  save();
+  resetForm();
+  show('home');
+}
+
+function editTrip(i){
+  const t = trips[i];
+  editIndex.value = i;
+  formTitle.textContent = 'تعديل الرحلة رقم ' + (i + 1);
+  carNo.value = t.car || '';
+  jordanStNo.value = t.jordanSt || '';
+  israelStNo.value = t.israelSt || '';
+  driver.value = t.driver || ((getMasterCars().find(v=>String(v.car).trim()===String(t.car||'').trim())||{}).driver || '');
+  customer.value = t.customer || '';
+  plastic.value = t.plastic || '';
+  batchNo.value = t.batchNo || '';
+  invoiceNo.value = t.invoiceNo || '';
+  unloadLocation.value = t.unloadLocation || '';
+  carFault.value = t.carFault || '';
+  weight.value = t.weight || '';
+  loadDate.value = t.loadDate || '';
+  unloadDate.value = t.unloadDate || '';
+  updateStayDays();
+  rent.value = t.rent || '';
+  expenses.value = t.expenses || '';
+  date.value = t.date || today();
+  status.value = normalizeStatusValue(t.status);
+  
+  advances.innerHTML = '';
+  (t.advances || []).forEach(a => addAdvanceRow(a));
+  if(!(t.advances || []).length) addAdvanceRow();
+  
+  show('add');
+}
+
+function restoreTripWarehouseWeight(t){
+  const amount = Number(t && (t.warehouseDeductedWeight ?? t.weight)) || 0;
+  const invoice = String(t && t.invoiceNo || '').trim();
+  if(amount <= 0 || !invoice) return;
+
+  let left = amount;
+
+  // Restore to an existing warehouse record first.
+  const openMatches = warehouse.filter(w => String(w.invoiceNo || '').trim() === invoice);
+  for(const w of openMatches){
+    const original = Number(w.totalWeight) || 0;
+    const used = Number(w.usedWeight) || 0;
+    const room = Math.max(0, original - used);
+    if(room <= 0) continue;
+    const give = Math.min(left, room);
+    w.usedWeight = Math.max(0, used - give);
+    w.remainingWeight = Math.min(original, (Number(w.remainingWeight) || 0) + give);
+    left -= give;
+    if(left <= 0.000001) break;
+  }
+
+  // If the shipment was completed and moved to warehouseCompleted, restore it there
+  // and move the record back to the active warehouse list.
+  if(left > 0.000001){
+    const completedMatches = warehouseCompleted.filter(c => String(c.invoiceNo || '').trim() === invoice);
+    for(const c of completedMatches){
+      const original = Number(c.totalWeight) || 0;
+      const used = Number(c.usedWeight) || 0;
+      const give = Math.min(left, used);
+      if(give <= 0) continue;
+      c.usedWeight = Math.max(0, used - give);
+      c.remainingWeight = Math.min(original, (Number(c.remainingWeight) || 0) + give);
+      left -= give;
+      const active = warehouse.find(w => String(w.id) === String(c.id));
+      if(!active){
+        warehouse.push({...c, remainingWeight: c.remainingWeight, usedWeight: c.usedWeight});
+      }
+      if(left <= 0.000001) break;
+    }
+    warehouseCompleted = warehouseCompleted.filter(c => {
+      const used = Number(c.usedWeight) || 0;
+      return !(String(c.invoiceNo || '').trim() === invoice && used <= 0.000001 && (Number(c.remainingWeight) || 0) > 0);
+    });
+  }
+
+  // Safety: if the exact amount could not be matched to existing records,
+  // do not silently lose it; create a recovery record tied to the invoice.
+  if(left > 0.000001){
+    warehouse.push({
+      id: Date.now() + Math.floor(Math.random()*1000),
+      item: t.plastic || 'مرتجع من حذف سيارة',
+      invoiceNo: invoice,
+      quantity: 0,
+      totalWeight: left,
+      usedWeight: 0,
+      remainingWeight: left,
+      date: today(),
+      lastUsedDate: ''
+    });
+  }
+}
+
+function deleteTrip(i){
+  const t = trips[i];
+  if(!t) return;
+  if(confirm('هل أنت متأكد من حذف رحلة السيارة رقم (' + (t.car || '') + ')؟')){
+    trips.splice(i, 1);
+    // لا نعتمد على عملية إرجاع يدوية؛ نعيد حساب المخزن بالكامل من جميع السيارات المحملة.
+    syncWarehouseFromTrips();
+    save();
+    renderAll();
+    update();
+    renderWarehouse();
+    if(cq.value.trim() || (document.getElementById('carDateFilter')?.value) || (document.getElementById('carPlasticFilter')?.value)) searchCar();
+    if(sq.value.trim()) searchStatement();
+  }
+}
+
+function cancelEdit(){ resetForm(); show('home'); }
+
+function statusBadge(s){
+  const safe = escapeHtml(normalizeStatusValue(s));
+  const cls = 'status-' + safe.replace(/\s+/g, '-');
+  return '<span class="status ' + cls + '">' + safe + '</span>';
+}
+
+function actions(i){
+  return '<div class="actions">' +
+    '<button onclick="editTripProtected(' + i + ')">تعديل</button>' +
+    '<button class="danger" onclick="deleteTripProtected(' + i + ')">حذف</button>' +
+    '</div>';
+}
+
+function checkPassword(){
+  const p = prompt('أدخل كلمة السر:');
+  return p === '123';
+}
+
+function editTripProtected(i){
+  if(!checkPassword()) return alert('كلمة السر غير صحيحة');
+  editTrip(i);
+}
+
+function deleteTripProtected(i){
+  if(!checkPassword()) return alert('كلمة السر غير صحيحة');
+  deleteTrip(i);
+}
+
+function groupByIsraelStatement(arr){
+  const groups = {};
+  arr.forEach(x => {
+    const key = String(x.israelSt || '').trim() || 'بدون بيان إسرائيلي';
+    if(!groups[key]) groups[key] = [];
+    groups[key].push(x);
+  });
+  return Object.entries(groups).sort((a,b) => a[0].localeCompare(b[0], 'ar', {numeric:true}));
+}
+
+function groupHeader(statement, count, colspan){
+  return '<tr><td colspan="'+colspan+'" style="background:#dbeafe;color:#174a70;font-weight:bold;font-size:14px;text-align:right">📄 بيان إسرائيلي: '+escapeHtml(statement)+' &nbsp; | &nbsp; عدد السيارات: '+count+'</td></tr>';
+}
+
+function table(arr){
+  if(!arr.length) return '<p style="padding:15px;text-align:center">لا توجد رحلات مسجلة حتى الآن.</p>';
+  let html = '<div class="table-wrapper"><table>' +
+    '<tr>' +
+      '<th>#</th><th>السيارة</th><th>بيان أردني</th><th>بيان إسرائيلي</th><th>السائق</th>' +
+      '<th>اسم الزبون</th><th>نوع البلاستك</th><th>Batch Number</th><th>رقم الفاتورة</th>' +
+      '<th>موقع التفريغ</th><th>عطل السيارة</th><th>تاريخ التحميل</th><th>تاريخ التفريغ</th><th>الوزن</th><th>الأجار</th>' +
+      '<th>إجمالي السلف</th><th>الحالة</th><th>إجراء</th>' +
+    '</tr>';
+  groupByIsraelStatement(arr).forEach(([statement, group]) => {
+    html += groupHeader(statement, group.length, 18);
+    html += group.map(x => {
+      const i = trips.indexOf(x);
+      const jSt = x.jordanSt || x.statement || '—';
+      const iSt = x.israelSt || '—';
+      return '<tr>' +
+        '<td><b>' + (i + 1) + '</b></td>' +
+        '<td>' + escapeHtml(x.car) + '</td>' +
+        '<td>' + escapeHtml(jSt) + '</td>' +
+        '<td>' + escapeHtml(iSt) + '</td>' +
+        '<td>' + escapeHtml(x.driver) + '</td>' +
+        '<td>' + escapeHtml(x.customer || '—') + '</td>' +
+        '<td><b>' + escapeHtml(x.plastic || '—') + '</b></td>' +
+        '<td>' + escapeHtml(x.batchNo || '—') + '</td>' +
+        '<td>' + escapeHtml(x.invoiceNo || '—') + '</td>' +
+        '<td>' + escapeHtml(x.unloadLocation || '—') + '</td>' +
+        '<td>' + escapeHtml(x.carFault || '—') + '</td>' +
+        '<td>' + escapeHtml(x.loadDate || '—') + '</td>' +
+        '<td>' + escapeHtml(x.unloadDate || '—') + '</td>' +
+        '<td>' + money(x.weight) + '</td>' +
+        '<td>' + money(x.rent) + '</td>' +
+        '<td>' + money(totalAdvances(x)) + '</td>' +
+        '<td>' + statusBadge(x.status) + '</td>' +
+        '<td>' + actions(i) + '</td>' +
+      '</tr>';
+    }).join('');
+  });
+  return html + '</table></div>';
+}
+
+function advanceTable(t){
+  const aa = t.advances || [];
+  if(!aa.length) return '<p class="small">لا توجد سلف مسجلة.</p>';
+  return '<div class="table-wrapper"><table><tr><th>#</th><th>المبلغ</th><th>التاريخ</th><th>الملاحظة</th></tr>' +
+    aa.map((x, i) => '<tr><td>' + (i + 1) + '</td><td>' + money(x.amount) + '</td><td>' + escapeHtml(x.date || '') + '</td><td>' + escapeHtml(x.note || '') + '</td></tr>').join('') +
+    '</table></div>';
+}
+
+function update(){
+  n.textContent = activeTripsCount();
+  r.textContent = money(trips.reduce((s, x) => s + (+x.rent || 0), 0));
+  a.textContent = money(trips.reduce((s, x) => s + totalAdvances(x), 0));
+  e.textContent = money(trips.reduce((s, x) => s + (+x.expenses || 0), 0));
+  if(document.getElementById('faultTotal')){
+    faultTotal.textContent = money(trips.reduce((s, x) => s + faultAmount(x), 0));
+  }
+  const available = trips.filter(isCurrentlyAvailable);
+  availableCars.innerHTML = available.length
+    ? table(available)
+    : '<p style="padding:15px;text-align:center">لا توجد سيارات موجودة حالياً.</p>';
+  recent.innerHTML = table(trips.slice(-5).reverse());
+}
+
+function clearCarFilters(){
+  cq.value = '';
+  if(document.getElementById('carDateFilter')) carDateFilter.value = '';
+  if(document.getElementById('carPlasticFilter')) carPlasticFilter.value = '';
+  carOut.innerHTML = '';
+}
+
+function searchCar(){
+  const q = cq.value.trim().toLowerCase();
+  const dateQ = (document.getElementById('carDateFilter')?.value || '').trim();
+  const plasticQ = (document.getElementById('carPlasticFilter')?.value || '').trim().toLowerCase();
+
+  if(!q && !dateQ && !plasticQ) return carOut.innerHTML = '';
+
+  let arr = trips.filter(x => {
+    const carMatch = !q || String(x.car || '').toLowerCase().includes(q);
+    const dateMatch = !dateQ || String(x.date || '') === dateQ || String(x.loadDate || '') === dateQ || String(x.unloadDate || '') === dateQ;
+    const plasticMatch = !plasticQ || String(x.plastic || '').toLowerCase().includes(plasticQ);
+    return carMatch && dateMatch && plasticMatch;
+  });
+
+  if(!arr.length) return carOut.innerHTML = '<div class="card">لا توجد رحلات مطابقة لخيارات البحث.</div>';
+
+  let rr = arr.reduce((s,x)=>s+(+x.rent||0),0);
+  let aa = arr.reduce((s,x)=>s+totalAdvances(x),0);
+  let ee = arr.reduce((s,x)=>s+(+x.expenses||0),0);
+  let remaining = arr.filter(x=>String(x.status||'').trim()!=='غادرت').length;
+
+  carOut.innerHTML =
+    '<div class="card print-selection-tools"><b>اختر الرحلات التي تريد طباعتها:</b> يمكنك تحديد رحلة واحدة أو عدة رحلات من نفس السيارة، ولن تتم طباعة الرحلات غير المحددة.</div>'+
+    '<div class="grid"><div class="card">الرحلات المتبقية<div class="stat">'+remaining+'</div></div>'+
+    '<div class="card">إجمالي الأجار<div class="stat">'+money(rr)+'</div></div>'+
+    '<div class="card">إجمالي السلف<div class="stat">'+money(aa)+'</div></div>'+
+    '<div class="card">المصاريف<div class="stat">'+money(ee)+'</div></div></div>'+
+    arr.map(x=>{
+      const idx=trips.indexOf(x);
+      const jSt=x.jordanSt||'—', iSt=x.israelSt||'—';
+      return '<div class="card car-search-result" data-trip-index="'+idx+'"><label class="print-check" style="display:block;margin-bottom:8px;font-weight:bold"><input type="checkbox" class="car-print-check" data-trip-index="'+idx+'"> اختيار هذه الرحلة للطباعة</label><h3>السيارة '+escapeHtml(x.car)+'</h3>'+
+      '<p><b>بيان أردني:</b> '+escapeHtml(jSt)+' | <b>بيان إسرائيلي:</b> '+escapeHtml(iSt)+'</p>'+
+      '<p><b>السائق:</b> '+escapeHtml(x.driver)+' | <b>الزبون:</b> '+escapeHtml(x.customer||'—')+' | <b>البلاستك:</b> '+escapeHtml(x.plastic||'—')+' | <b>Batch Number:</b> '+escapeHtml(x.batchNo||'—')+' | <b>رقم الفاتورة:</b> '+escapeHtml(x.invoiceNo||'—')+' | <b>الوزن:</b> '+money(x.weight)+'</p>'+
+      '<p><b>موقع التفريغ:</b> '+escapeHtml(x.unloadLocation||'—')+' | <b>عطل السيارة:</b> '+money(x.carFault)+' | <b>صافي حساب العطل:</b> '+money(faultAmount(x))+'</p>'+
+      '<p><b>تاريخ التحميل:</b> '+escapeHtml(x.loadDate||'—')+' | <b>تاريخ التفريغ:</b> '+escapeHtml(x.unloadDate||'—')+' | <b>مدة الجسر:</b> '+stayText(calcStayDays(x.loadDate,x.unloadDate))+'</p>'+
+      '<p><b>الحالة:</b> '+statusBadge(x.status)+'</p>'+
+      '<p><b>الأجار:</b> '+money(x.rent)+' | <b>إجمالي السلف:</b> '+money(totalAdvances(x))+' | <b>المصاريف:</b> '+money(x.expenses)+'</p>'+
+      '<h4>تفاصيل السلف</h4>'+advanceTable(x)+actions(trips.indexOf(x))+'</div>';
+    }).join('');
+}
+function renderLoadedResults(dateQ){
+  const jordanQ=(document.getElementById('loadSearchJordan')?.value||'').trim().toLowerCase();
+  const israelQ=(document.getElementById('loadSearchIsrael')?.value||'').trim().toLowerCase();
+  const carQ=(document.getElementById('loadSearchCar')?.value||'').trim().toLowerCase();
+  const plasticQ=(document.getElementById('loadSearchPlastic')?.value||'').trim().toLowerCase();
+  const statusQ=(document.getElementById('loadSearchStatus')?.value||'').trim();
+  const batchQ=(document.getElementById('loadSearchBatch')?.value||'').trim().toLowerCase();
+  const locationQ=(document.getElementById('loadSearchLocation')?.value||'').trim().toLowerCase();
+  const invoiceQ=(document.getElementById('loadSearchInvoice')?.value||'').trim().toLowerCase();
+  const noIsrael=document.getElementById('loadSearchNoIsrael')?.checked===true;
+
+  const arr = trips.filter(x => {
+    const dateMatch = !dateQ || String(x.loadDate || '') === dateQ;
+    const jordanMatch = !jordanQ || String(x.jordanSt || x.statement || '').toLowerCase().includes(jordanQ);
+    const israelMatch = !israelQ || String(x.israelSt || '').toLowerCase().includes(israelQ);
+    const noIsraelMatch = !noIsrael || !String(x.israelSt || '').trim();
+    const carMatch = !carQ || String(x.car || '').toLowerCase().includes(carQ);
+    const plasticMatch = !plasticQ || String(x.plastic || '').toLowerCase().includes(plasticQ);
+    const statusMatch = !statusQ || normalizeStatusValue(x.status) === statusQ;
+    const batchMatch = !batchQ || String(x.batchNo || '').toLowerCase().includes(batchQ);
+    const locationMatch = !locationQ || String(x.unloadLocation || '').toLowerCase().includes(locationQ);
+    const invoiceMatch = !invoiceQ || String(x.invoiceNo || '').toLowerCase().includes(invoiceQ);
+    return dateMatch && jordanMatch && israelMatch && noIsraelMatch && carMatch && plasticMatch && statusMatch && batchMatch && locationMatch && invoiceMatch;
+  });
+
+  if(!arr.length){
+    loadedSearchOut.innerHTML='<div class="card"><h3>نتائج بحث التحميل</h3><p style="text-align:center">لا توجد سيارات مطابقة للبحث.</p></div>';
+    return;
+  }
+
+  const totalRent=arr.reduce((s,x)=>s+(+x.rent||0),0);
+  const totalExpenses=arr.reduce((s,x)=>s+(+x.expenses||0),0);
+  const totalRentExpenses=totalRent+totalExpenses;
+  const plastics=[...new Set(arr.map(x=>String(x.plastic||'').trim()).filter(Boolean))];
+  const groups=groupByIsraelStatement(arr);
+  const title = noIsrael
+    ? 'السيارات المحملة بدون بيان إسرائيلي'
+    : (dateQ ? 'السيارات التي تم تحميلها بتاريخ '+escapeHtml(dateQ) : 'نتائج بحث التحميل');
+
+  let html='<div class="card"><h3>🚛 '+title+'</h3>'+
+    '<div class="grid"><div class="card">عدد السيارات<div class="stat">'+arr.length+'</div></div>'+
+    '<div class="card">مجموع الأجار<div class="stat">'+money(totalRent)+'</div></div>'+
+    '<div class="card">مجموع المصاريف<div class="stat">'+money(totalExpenses)+'</div></div>'+
+    '<div class="card">مجموع الأجار + المصاريف<div class="stat">'+money(totalRentExpenses)+'</div></div>'+
+    '<div class="card">أنواع البلاستك<div class="stat" style="font-size:16px">'+escapeHtml(plastics.join('، ')||'—')+'</div></div></div>'+
+    '<div class="card" style="background:#f8fafc;border:1px solid #dbeafe"><b>يمكنك تحديد كل بيان للطباعة، أو تغيير حالة البيان بالكامل.</b></div>';
+
+  groups.forEach(([statement, group], gi)=>{
+    const key='loaded-statement-'+gi;
+    html+='<div class="card loaded-statement-group" data-statement-key="'+escapeHtml(key)+'" style="border:1px solid #dbeafe;margin-top:12px">'+
+      '<div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;background:#eff6ff;padding:10px;border-radius:8px">'+
+      '<label style="font-weight:bold;margin:0"><input type="checkbox" class="loaded-statement-print-check" data-group-key="'+escapeHtml(key)+'"> اختيار البيان للطباعة</label>'+
+      '<b>📄 البيان الإسرائيلي: '+escapeHtml(statement)+' — '+group.length+' سيارة</b></div>'+
+      '<div class="actions" style="margin-top:8px"><select class="loaded-statement-status" data-statement="'+escapeHtml(statement)+'" style="max-width:220px"><option value="">تغيير حالة البيان بالكامل...</option><option value="في الساحه لوجستيه">في الساحه لوجستيه</option><option value="في الساحه الجمركيه">في الساحه الجمركيه</option><option value="على سرا تفريغ">على سرا تفريغ</option><option value="غادرت">غادرت</option></select><button class="success" onclick="applyLoadedStatementStatus(this)">تطبيق الحالة على البيان</button></div>'+
+      table(group)+'</div>';
+  });
+  html+='</div>';
+  loadedSearchOut.innerHTML=html;
+}
+function searchLoadedByDate(){
+  const noIsrael=document.getElementById('loadSearchNoIsrael')?.checked===true;
+  const ids=['loadSearchDate','loadSearchJordan','loadSearchIsrael','loadSearchCar','loadSearchPlastic','loadSearchStatus','loadSearchBatch','loadSearchLocation','loadSearchInvoice'];
+  const has=noIsrael || ids.some(id => String(document.getElementById(id)?.value||'').trim());
+  if(!has){
+    loadedSearchOut.innerHTML='<div class="card"><p style="text-align:center">أدخل معيار بحث واحد على الأقل.</p></div>';
+    return;
+  }
+  renderLoadedResults((document.getElementById('loadSearchDate')?.value||'').trim());
+}
+function showTodayLoaded(){
+  loadSearchDate.value=today();
+  searchLoadedByDate();
+}
+function clearLoadedSearch(){
+  ['loadSearchDate','loadSearchJordan','loadSearchIsrael','loadSearchCar','loadSearchPlastic','loadSearchStatus','loadSearchBatch','loadSearchLocation','loadSearchInvoice'].forEach(id=>{const el=document.getElementById(id);if(el) el.value='';});
+  const noIsraelEl=document.getElementById('loadSearchNoIsrael'); if(noIsraelEl) noIsraelEl.checked=false;
+  loadedSearchOut.innerHTML='';
+}
+function applyLoadedStatementStatus(btn){
+  const card=btn.closest('.loaded-statement-group');
+  const select=card?.querySelector('.loaded-statement-status');
+  const statement=select?.dataset.statement||'';
+  const newStatus=select?.value||'';
+  if(!statement || !newStatus) return alert('اختر الحالة الجديدة أولاً.');
+  const matched=trips.filter(x=>String(x.israelSt||'').trim()===statement || (!x.israelSt && statement==='بدون بيان إسرائيلي'));
+  if(!matched.length) return alert('لا توجد سيارات لهذا البيان.');
+  if(!confirm('سيتم تغيير حالة '+matched.length+' سيارة/رحلة للبيان '+statement+' إلى: '+newStatus+'\nهل تريد المتابعة؟')) return;
+  matched.forEach(x=>{x.status=newStatus;if(isUnloaded(x)&&!x.unloadDate)x.unloadDate=today();});
+  save();
+  renderLoadedResults((document.getElementById('loadSearchDate')?.value||'').trim());
+  alert('تم تغيير حالة البيان بالكامل بنجاح.');
+}
+function toggleAllLoadedStatementPrint(checked){
+  document.querySelectorAll('#loadedSearchOut .loaded-statement-print-check').forEach(cb=>cb.checked=checked);
+}
+function printSelectedLoadedStatements(){
+  const checks=[...document.querySelectorAll('#loadedSearchOut .loaded-statement-print-check:checked')];
+  if(!checks.length) return alert('حدد بياناً واحداً على الأقل للطباعة.');
+  const selected=new Set(checks.map(cb=>cb.dataset.groupKey));
+  const groups=[...document.querySelectorAll('#loadedSearchOut .loaded-statement-group')].filter(g=>selected.has(g.dataset.statementKey));
+  if(!groups.length) return alert('لم يتم العثور على البيان المحدد للطباعة. أعد البحث ثم حدد البيان مرة أخرى.');
+
+  // إنشاء نسخة طباعة مستقلة تحتوي فقط على البيانات المحددة،
+  // بدلاً من الاعتماد على إخفاء بقية العناصر داخل الصفحة.
+  const printArea=document.createElement('div');
+  printArea.id='selectedLoadedPrintArea';
+  printArea.className='selected-loaded-print-area';
+  const title=document.createElement('div');
+  title.className='selected-print-title';
+  title.innerHTML='<h2>كشف بيانات التحميل</h2><div>البيانات المحددة للطباعة: '+groups.length+'</div>';
+  printArea.appendChild(title);
+  groups.forEach((g,i)=>{
+    const clone=g.cloneNode(true);
+    clone.querySelectorAll('.loaded-statement-print-check, .actions, button, select, input').forEach(el=>el.remove());
+    clone.classList.remove('print-hide-temp');
+    clone.style.pageBreakBefore = i===0 ? 'auto' : 'always';
+    clone.style.breakBefore = i===0 ? 'auto' : 'page';
+    printArea.appendChild(clone);
+  });
+  document.body.appendChild(printArea);
+  document.body.classList.add('printing-selected-loaded');
+  setTimeout(()=>{
+    window.print();
+    setTimeout(()=>{
+      document.body.classList.remove('printing-selected-loaded');
+      printArea.remove();
+    },500);
+  },100);
+}
+
+function toggleAllCarPrintSelection(checked){
+  document.querySelectorAll('#carOut .car-print-check').forEach(cb => cb.checked = checked);
+}
+
+function printSelectedCars(){
+  const checks = [...document.querySelectorAll('#carOut .car-print-check:checked')];
+  if(!checks.length) return alert('حدد سيارة أو رحلة واحدة على الأقل للطباعة.');
+  const selected = new Set(checks.map(cb => cb.dataset.tripIndex));
+  const cards = [...document.querySelectorAll('#carOut .car-search-result')];
+  const hidden = [];
+  cards.forEach(card => {
+    if(!selected.has(card.dataset.tripIndex)){
+      card.classList.add('print-hide-temp');
+      hidden.push(card);
+    }
+  });
+  const current = document.getElementById('car');
+  current.classList.add('printing');
+  setTimeout(() => {
+    window.print();
+    setTimeout(() => {
+      current.classList.remove('printing');
+      hidden.forEach(el => el.classList.remove('print-hide-temp'));
+    }, 300);
+  }, 100);
+}
+
+function searchStatement(){
+  const q = sq.value.trim();
+  const statusQ = (document.getElementById('statementStatusFilter')?.value || '').trim();
+  if(!q && !statusQ) return statementOut.innerHTML = '';
+  let arr = trips.filter(x => {
+    const statementMatch = !q || (x.jordanSt && x.jordanSt.includes(q)) || (x.israelSt && x.israelSt.includes(q)) || (x.statement && x.statement.includes(q));
+    const statusMatch = !statusQ || normalizeStatusValue(x.status) === statusQ;
+    return statementMatch && statusMatch;
+  });
+  if(!arr.length) return statementOut.innerHTML = '<div class="card">لا توجد بيانات مطابقة للبحث.</div>';
+  const cars = [...new Set(arr.map(x => x.car).filter(Boolean))];
+  const statements = [...new Set(arr.map(x => x.israelSt || x.jordanSt || x.statement).filter(Boolean))];
+  statementOut.innerHTML = '<div class="card"><h3>📄 نتائج البحث عن البيان</h3>' +
+    '<p><b>البيانات/البيانات المرتبطة:</b> ' + statements.map(escapeHtml).join('، ') + '</p>' +
+    '<p><b>السيارات المرتبطة:</b> ' + cars.map(escapeHtml).join('، ') + '</p>' +
+    '<p><b>عدد الرحلات:</b> ' + arr.length + ' | <b>الوزن الإجمالي:</b> ' + money(arr.reduce((s, x) => s + (+x.weight || 0), 0)) + '</p>' +
+    '<div class="card" style="background:#f8fafc;border:1px solid #dbeafe">' +
+      '<b>تغيير حالة البيان بالكامل:</b> ' +
+      '<select id="statementBulkStatus" style="max-width:260px;display:inline-block;margin:0 8px">' +
+        '<option value="في الساحه لوجستيه">في الساحه لوجستيه</option>' +
+        '' +
+        '<option value="في الساحه الجمركيه">في الساحه الجمركيه</option>' +
+        '' +
+        '<option value="على سرا تفريغ">على سرا تفريغ</option>' +
+        '<option value="غادرت">غادرت</option>' +
+      '</select>' +
+      '<button class="success" onclick="applyStatementStatus()">تطبيق على كل سيارات البيان</button>' +
+    '</div>' +
+    table(arr) + '</div>';
+}
+
+function applyStatementStatus(){
+  const q = sq.value.trim();
+  const statusEl = document.getElementById('statementBulkStatus');
+  if(!q || !statusEl) return alert('أدخل رقم البيان أولاً حتى يتم تغيير حالة البيان بالكامل.');
+  const newStatus = statusEl.value;
+  const matched = trips.filter(x => (x.jordanSt && x.jordanSt.includes(q)) || (x.israelSt && x.israelSt.includes(q)) || (x.statement && x.statement.includes(q)));
+  if(!matched.length) return alert('لا توجد سيارات مرتبطة بهذا البيان.');
+  if(!confirm('سيتم تغيير حالة ' + matched.length + ' سيارة/رحلة إلى: ' + newStatus + '\nهل تريد المتابعة؟')) return;
+  matched.forEach(x => { x.status = newStatus; if(isUnloaded(x) && !x.unloadDate) x.unloadDate = today(); });
+  save();
+  searchStatement();
+  alert('تم تغيير حالة جميع سيارات البيان بنجاح.');
+}
+
+function moveAllUnloadedToDeparted(){
+  const arr = trips.filter(t => isUnloaded(t));
+  if(!arr.length) return alert('لا توجد سيارات في كشف التفريغ.');
+  if(!confirm('سيتم نقل جميع السيارات المفرغة (' + arr.length + ' سيارة) إلى كشف المغادره. هل تريد المتابعة؟')) return;
+  arr.forEach(t => t.status = 'غادرت');
+  save();
+  renderUnloaded();
+  renderDeparted();
+  alert('تم نقل جميع السيارات إلى كشف المغادره.');
+}
+
+
+function clearOpenOrderForm(){
+  ['orderIsraelSt','orderCustomer','orderPlastic','orderUnloadLocation','orderInvoiceNo','orderWeight','orderCarCount'].forEach(id=>{
+    const el=document.getElementById(id); if(el) el.value='';
+  });
+  const d=document.getElementById('orderDate'); if(d) d.value=today();
+  const edit=document.getElementById('openOrderEditId'); if(edit) edit.value='';
+  const title=document.getElementById('openOrderFormTitle'); if(title) title.textContent='➕ إضافة طلبية مفتوحة';
+  const btn=document.getElementById('openOrderSaveBtn'); if(btn) btn.textContent='💾 حفظ الطلبية';
+}
+
+function nextOpenOrderNo(){
+  const nums=openOrders.map(o=>+o.orderNo||0).filter(Boolean);
+  return (nums.length ? Math.max(...nums) : 0) + 1;
+}
+
+function saveOpenOrder(){
+  const israelSt=document.getElementById('orderIsraelSt').value.trim();
+  const customer=document.getElementById('orderCustomer').value.trim();
+  const plastic=document.getElementById('orderPlastic').value.trim();
+  const unloadLocation=document.getElementById('orderUnloadLocation').value.trim();
+  const invoiceNo=document.getElementById('orderInvoiceNo').value.trim();
+  const totalWeight=Math.max(0, parseFloat(document.getElementById('orderWeight').value)||0);
+  const date=document.getElementById('orderDate').value||today();
+  const carCount=Math.max(1, parseInt(document.getElementById('orderCarCount').value,10)||0);
+  if(!carCount) return alert('أدخل عدد السيارات المطلوبة.');
+  if(!carCount) return alert('أدخل عدد السيارات المطلوبة.');
+  const editId=document.getElementById('openOrderEditId').value;
+  const duplicate=israelSt ? openOrders.find(x=>String(x.israelSt).trim()===israelSt && String(x.id)!==String(editId)) : null;
+  if(duplicate) return alert('رقم البيان الإسرائيلي موجود مسبقاً كطلبية مفتوحة.');
+
+  if(editId){
+    const o=openOrders.find(x=>String(x.id)===String(editId));
+    if(!o) return alert('الطلبية غير موجودة.');
+    const added=(o.cars||[]).length;
+    if(carCount < added) return alert('عدد السيارات لا يمكن أن يكون أقل من عدد السيارات التي تم ترحيلها بالفعل ('+added+').');
+    Object.assign(o,{israelSt,customer,plastic,unloadLocation,invoiceNo,totalWeight,date,carCount});
+    save(); renderOpenOrders(); clearOpenOrderForm();
+    return alert('تم تعديل الطلبية بنجاح.');
+  }
+
+  const o={id:Date.now(),orderNo:nextOpenOrderNo(),israelSt,customer,plastic,unloadLocation,invoiceNo,totalWeight,date,carCount,cars:[],transferredWeight:0};
+  openOrders.push(o); save(); renderOpenOrders(); clearOpenOrderForm();
+  alert('تم حفظ الطلبية رقم '+o.orderNo+'.');
+}
+
+function editOpenOrder(orderId){
+  const o=openOrders.find(x=>String(x.id)===String(orderId)); if(!o) return;
+  document.getElementById('orderIsraelSt').value=o.israelSt||'';
+  document.getElementById('orderCustomer').value=o.customer||'';
+  document.getElementById('orderPlastic').value=o.plastic||'';
+  document.getElementById('orderUnloadLocation').value=o.unloadLocation||'';
+  document.getElementById('orderInvoiceNo').value=o.invoiceNo||'';
+  document.getElementById('orderWeight').value=o.totalWeight||'';
+  document.getElementById('orderDate').value=o.date||today();
+  document.getElementById('orderCarCount').value=o.carCount||0;
+  document.getElementById('openOrderEditId').value=o.id;
+  document.getElementById('openOrderFormTitle').textContent='✏️ تعديل الطلبية رقم '+(o.orderNo||'—');
+  document.getElementById('openOrderSaveBtn').textContent='💾 حفظ التعديل';
+  document.getElementById('orderIsraelSt').focus();
+}
+
+function transferOpenOrderToCar(orderId){
+  const o=openOrders.find(x=>String(x.id)===String(orderId)); if(!o) return;
+  o.cars=o.cars||[];
+  const remaining=Math.max(0,(+o.carCount||0)-o.cars.length);
+  if(remaining<=0) return alert('تمت إضافة كل السيارات المطلوبة لهذه الطلبية.');
+  const car=prompt('أدخل رقم السيارة لإضافتها إلى الطلبية رقم '+(o.orderNo||'')+' — متبقي '+remaining+' سيارة:');
+  if(car===null) return;
+  const carNoText=car.trim(); if(!carNoText) return alert('يجب إدخال رقم السيارة.');
+  if(o.cars.some(c=>String(c).trim()===carNoText)) return alert('هذه السيارة مضافة مسبقاً لهذه الطلبية.');
+  if(trips.some(t=>String(t.car||'').trim()===carNoText && String(t.orderId||'')===String(o.id))) return alert('هذه السيارة موجودة بالفعل في هذه الطلبية.');
+
+  const jordanSt=(prompt('البيان الأردني للسيارة (اختياري — اتركه فارغاً إذا غير موجود):', '')||'').trim();
+  const carFault=parseFloat(prompt('عطل السيارة:', '0')||'0');
+  const rent=parseFloat(prompt('أجار السيارة:', '0')||'0');
+  const expenses=parseFloat(prompt('مصاريف السيارة:', '0')||'0');
+  const batchNo=(prompt('Batch Number:', '')||'').trim();
+  const defaultWeight = Math.max(0,(+o.totalWeight||0)-(+o.transferredWeight||0)) / Math.max(1,remaining);
+  const weight=parseFloat(prompt('وزن السيارة (كغم):', String(Math.round(defaultWeight*100)/100))||'0');
+  if([carFault,rent,expenses,weight].some(v=>Number.isNaN(v)||v<0)) return alert('تأكد من إدخال العطل والأجار والمصاريف والوزن بشكل صحيح.');
+
+  if(o.invoiceNo){
+    const inv=String(o.invoiceNo).trim();
+    const matches=warehouse.filter(w=>String(w.invoiceNo||'').trim()===inv);
+    const availableWeight=matches.reduce((s,w)=>s+(+w.remainingWeight||0),0);
+    if(!matches.length) return alert('رقم الفاتورة '+inv+' غير موجود في المخزن.');
+    if(weight>availableWeight+0.000001) return alert('الوزن المطلوب '+weight+' كغم أكبر من المتبقي في المخزن لهذه الفاتورة: '+availableWeight+' كغم.');
+    let left=weight;
+    for(const w of matches){
+      const take=Math.min(left,+w.remainingWeight||0);
+      w.remainingWeight=Math.max(0,(+w.remainingWeight||0)-take);
+      w.usedWeight=(+w.usedWeight||0)+take;
+      w.lastUsedDate=today();
+      if(w.remainingWeight<=0.000001) w.remainingWeight=0;
+      left-=take;
+      if(left<=0.000001) break;
+    }
+    warehouse=warehouse.filter(w=>String(w.invoiceNo||'').trim()!==inv || (+w.remainingWeight||0)>0);
+    matches.filter(w=>(+w.remainingWeight||0)===0).forEach(w=>{
+      if(!warehouseCompleted.some(c=>String(c.id)===String(w.id))){ warehouseCompleted.push({...w,completedDate:today(),remainingWeight:0}); }
+    });
+  }
+
+  const savedDriver=(getMasterCars().find(v=>String(v.car).trim()===carNoText)||{}).driver||'';
+  const loadDate=today();
+  trips.push({car:carNoText,jordanSt,statement:jordanSt,israelSt:o.israelSt||'',noIsraelStatement:!String(o.israelSt||'').trim(),orderId:o.id,orderNo:o.orderNo||'',driver:savedDriver,customer:o.customer||'',plastic:o.plastic||'',batchNo,invoiceNo:o.invoiceNo||'',unloadLocation:o.unloadLocation||'',carFault,weight,rent,advances:[],expenses,loadDate,unloadDate:'',date:o.date||today(),status:'في الساحه لوجستيه',warehouseDeducted:!!o.invoiceNo,warehouseDeductedWeight:!!o.invoiceNo ? weight : 0});
+  o.cars.push(carNoText);
+  o.transferredWeight=(+o.transferredWeight||0)+weight;
+  const left=Math.max(0,(+o.carCount||0)-o.cars.length);
+  const completed=left===0;
+  if(completed){ const idx=openOrders.findIndex(x=>String(x.id)===String(o.id)); if(idx>=0) openOrders.splice(idx,1); }
+  syncWarehouseFromTrips();
+  save(); renderOpenOrders(); refreshViews(); renderWarehouse();
+  alert(completed ? 'تم ترحيل السيارة وإكمال الطلبية بالكامل. تم حذف الطلبية تلقائياً.' : 'تم ترحيل السيارة إلى السيارات الموجودة حالياً وتحديث رصيد المخزن. المتبقي في الطلبية: '+left+' سيارة.');
+}
+
+function closeOpenOrder(orderId){
+  const idx=openOrders.findIndex(o=>String(o.id)===String(orderId)); if(idx<0) return;
+  if(!confirm('إغلاق هذا الطلب المفتوح؟')) return;
+  openOrders.splice(idx,1); save(); renderOpenOrders();
+}
+function deleteOpenOrder(orderId){
+  const idx=openOrders.findIndex(o=>String(o.id)===String(orderId)); if(idx<0) return;
+  if(!confirm('حذف هذا الطلب المفتوح؟')) return;
+  openOrders.splice(idx,1); save(); renderOpenOrders();
+}
+
+function clearWarehouseForm(){
+  ['warehouseItem','warehouseInvoice','warehouseQty','warehouseWeight','warehouseNotes'].forEach(id=>{const e=document.getElementById(id);if(e)e.value='';});
+  const d=document.getElementById('warehouseDate'); if(d)d.value=today();
+  const edit=document.getElementById('warehouseEditId'); if(edit)edit.value='';
+  const title=document.getElementById('warehouseFormTitle'); if(title)title.textContent='➕ إضافة بضاعة للمخزن';
+}
+function saveWarehouseItem(){
+  const item=document.getElementById('warehouseItem').value.trim();
+  const invoice=document.getElementById('warehouseInvoice').value.trim();
+  const qty=Math.max(0,parseFloat(document.getElementById('warehouseQty').value)||0);
+  const weight=Math.max(0,parseFloat(document.getElementById('warehouseWeight').value)||0);
+  const date=document.getElementById('warehouseDate').value||today();
+  if(!item||!invoice||weight<=0)return alert('أدخل اسم الصنف ورقم الفاتورة والوزن.');
+  const id=document.getElementById('warehouseEditId').value;
+  if(id){
+    const w=warehouse.find(x=>String(x.id)===String(id)) || warehouseCompleted.find(x=>String(x.id)===String(id));
+    if(!w)return;
+    Object.assign(w,{item,invoiceNo:invoice,quantity:qty,totalWeight:weight,date,notes:(document.getElementById('warehouseNotes')?.value||'').trim()});
+  }else{
+    warehouse.push({id:Date.now(),item,invoiceNo:invoice,quantity:qty,totalWeight:weight,usedWeight:0,notes:(document.getElementById('warehouseNotes')?.value||'').trim(),remainingWeight:weight,date,lastUsedDate:''});
+  }
+  // مهم: بعد إضافة/تعديل الفاتورة، افحص كل السيارات القديمة والحالية
+  // التي تحمل نفس رقم الفاتورة واحسب المصروف والمتبقي تلقائياً.
+  syncWarehouseFromTrips();
+  save();renderWarehouse();clearWarehouseForm();
+}
+function syncWarehouseFromTrips(){
+  // المخزن هو المصدر الأصلي للفاتورة، والرصيد المستخدم يحسب تلقائياً
+  // من مجموع أوزان كل السيارات المحملة على نفس رقم الفاتورة.
+  const allRecords = [];
+  const seen = new Set();
+  [...warehouse, ...warehouseCompleted].forEach(w => {
+    const id = String(w.id);
+    if(seen.has(id)) return;
+    seen.add(id);
+    allRecords.push({...w});
+  });
+
+  const usedByInvoice = {};
+  trips.forEach(t => {
+    const inv = String(t.invoiceNo || '').trim();
+    const wt = Number(t.weight) || 0;
+    if(inv && wt > 0) usedByInvoice[inv] = (usedByInvoice[inv] || 0) + wt;
+  });
+
+  const nextWarehouse = [];
+  const nextCompleted = [];
+  allRecords.forEach(w => {
+    const inv = String(w.invoiceNo || '').trim();
+    const original = Math.max(0, Number(w.totalWeight) || 0);
+    const totalUsed = Math.min(original, Math.max(0, Number(usedByInvoice[inv]) || 0));
+    const remaining = Math.max(0, original - totalUsed);
+    const oldCompleted = warehouseCompleted.find(c => String(c.id) === String(w.id));
+    const updated = {
+      ...w,
+      totalWeight: original,
+      usedWeight: totalUsed,
+      remainingWeight: remaining,
+      lastUsedDate: totalUsed > 0 ? today() : (w.lastUsedDate || '')
+    };
+    if(remaining <= 0.000001){
+      nextCompleted.push({...updated, remainingWeight: 0, completedDate: oldCompleted?.completedDate || today()});
+    } else {
+      nextWarehouse.push({...updated, remainingWeight: remaining});
+    }
+  });
+  warehouse = nextWarehouse;
+  warehouseCompleted = nextCompleted;
+}
+
+function deleteWarehouseInvoiceById(id){
+  const w = warehouse.find(x => String(x.id) === String(id)) || warehouseCompleted.find(x => String(x.id) === String(id));
+  if(!w) return alert('الفاتورة غير موجودة في المخزن.');
+  deleteWarehouseInvoice(w.invoiceNo);
+}
+
+function deleteWarehouseInvoice(invoiceNo){
+  const inv=String(invoiceNo||'').trim();
+  if(!inv) return;
+  if(!checkPassword()) return alert('كلمة السر غير صحيحة');
+  const activeCount=warehouse.filter(w=>String(w.invoiceNo||'').trim()===inv).length;
+  const completedCount=warehouseCompleted.filter(w=>String(w.invoiceNo||'').trim()===inv).length;
+  if(!activeCount && !completedCount) return alert('الفاتورة غير موجودة في المخزن.');
+  const linked=trips.filter(t=>String(t.invoiceNo||'').trim()===inv);
+  if(linked.length){
+    return alert('لا يمكن حذف الفاتورة لأنها مرتبطة بـ '+linked.length+' سيارة. احذف السيارات المرتبطة بالفاتورة أولاً.');
+  }
+  if(!confirm('هل أنت متأكد من حذف الفاتورة رقم ('+inv+') من المخزن؟\nسيتم حذف سجل الفاتورة من المخزن والفواتير المكتملة فقط.')) return;
+  warehouse=warehouse.filter(w=>String(w.invoiceNo||'').trim()!==inv);
+  warehouseCompleted=warehouseCompleted.filter(w=>String(w.invoiceNo||'').trim()!==inv);
+  save();
+  renderWarehouse();
+}
+
+function renderWarehouse(){
+  const out=document.getElementById('warehouseOut'); const done=document.getElementById('warehouseCompletedOut'); if(!out)return;
+  const q=(document.getElementById('warehouseSearchInvoice')?.value||'').trim().toLowerCase();
+  const current=warehouse.filter(w=>!q || String(w.invoiceNo||'').toLowerCase().includes(q));
+  const completed=warehouseCompleted.filter(w=>!q || String(w.invoiceNo||'').toLowerCase().includes(q));
+  if(!current.length) out.innerHTML='<div class="card"><p style="text-align:center">لا يوجد رصيد مطابق لرقم الفاتورة.</p></div>';
+  else out.innerHTML='<div class="table-wrapper"><table><tr><th>#</th><th>الصنف</th><th>رقم الفاتورة</th><th>الكمية</th><th>الوزن الأصلي</th><th>المصروف</th><th>المتبقي</th><th>تاريخ الوصول</th><th>ملاحظات</th><th>إجراء</th></tr>'+current.map((w,i)=>'<tr><td>'+(i+1)+'</td><td>'+escapeHtml(w.item)+'</td><td><b>'+escapeHtml(w.invoiceNo)+'</b></td><td>'+money(w.quantity)+'</td><td>'+money(w.totalWeight)+' كغم</td><td>'+money(w.usedWeight)+' كغم</td><td><b>'+money(w.remainingWeight)+' كغم</b></td><td>'+escapeHtml(w.date)+'</td><td>'+escapeHtml(w.notes||'')+'</td><td><button onclick="editWarehouseItem('+w.id+')">✏️ تعديل</button> <button class="danger" onclick="deleteWarehouseInvoiceById('+w.id+')">🗑️ حذف الفاتورة</button></td></tr>').join('')+'</table></div>';
+  if(done) done.innerHTML=completed.length?'<div class="card"><h3>✅ الفواتير المكتملة</h3><div class="table-wrapper"><table><tr><th>الصنف</th><th>رقم الفاتورة</th><th>الوزن الأصلي</th><th>تاريخ الوصول</th><th>تاريخ الإكمال</th><th>إجراء</th></tr>'+completed.slice().reverse().map(w=>'<tr><td>'+escapeHtml(w.item)+'</td><td>'+escapeHtml(w.invoiceNo)+'</td><td>'+money(w.totalWeight)+' كغم</td><td>'+escapeHtml(w.date)+'</td><td>'+escapeHtml(w.completedDate||'')+'</td><td><button class="danger" onclick="deleteWarehouseInvoiceById('+w.id+')">🗑️ حذف الفاتورة</button></td></tr>').join('')+'</table></div></div>':'';
+}
+function editWarehouseItem(id){const w=warehouse.find(x=>String(x.id)===String(id));if(!w)return;document.getElementById('warehouseItem').value=w.item||'';document.getElementById('warehouseInvoice').value=w.invoiceNo||'';document.getElementById('warehouseQty').value=w.quantity||'';document.getElementById('warehouseWeight').value=w.totalWeight||'';document.getElementById('warehouseDate').value=w.date||today();document.getElementById('warehouseNotes').value=w.notes||'';document.getElementById('warehouseEditId').value=w.id;document.getElementById('warehouseFormTitle').textContent='✏️ تعديل بضاعة المخزن';}
+
+function renderDailyExpenses(){
+  const out=document.getElementById('dailyExpensesOut');
+  const dateEl=document.getElementById('dailyExpenseDate');
+  const searchEl=document.getElementById('dailyExpenseSearch');
+  if(!out||!dateEl) return;
+  if(!dateEl.value) dateEl.value=today();
+  const d=dateEl.value;
+  const q=String(searchEl?.value||'').trim().toLowerCase();
+  const matchesSearch=t=>!q || [t.car,t.jordanSt,t.statement,t.israelSt,(t.noIsraelStatement?'بدون بيان إسرائيلي':''),t.driver,t.invoiceNo,t.customer,t.plastic,t.batchNo].some(v=>String(v||'').toLowerCase().includes(q));
+  const filteredTrips=trips.filter(t=>matchesSearch(t) && (String(t.loadDate||'')===d || String(t.unloadDate||'')===d || (t.advances||[]).some(a=>String(a.date||'')===d && (+a.amount||0)>0)));
+  const loading=filteredTrips.filter(t=>String(t.loadDate||'')===d);
+  const unloading=filteredTrips.filter(t=>String(t.unloadDate||'')===d && isUnloaded(t));
+  const advancesToday=[];
+  filteredTrips.forEach(t=>(t.advances||[]).forEach(a=>{
+    if(String(a.date||'')===d && (+a.amount||0)>0) advancesToday.push({car:t.car||'—',driver:t.driver||'—',amount:+a.amount||0,note:a.note||'',trip:t});
+  }));
+  const loadRent=loading.reduce((s,t)=>s+(+t.rent||0),0);
+  const moneyRows=(arr,cols,cells)=>arr.length?'<div class="table-wrapper"><table><tr>'+cols.map(c=>'<th>'+c+'</th>').join('')+'</tr>'+arr.map(x=>'<tr>'+cells(x).map(c=>'<td>'+c+'</td>').join('')+'</tr>').join('')+'</table></div>':'<p style="text-align:center">لا يوجد.</p>';
+  const unloadingMap=new Map();
+  unloading.forEach(t=>{
+    const key=String(t.car||t.id);
+    if(!unloadingMap.has(key)) unloadingMap.set(key,{car:t.car||'—',fault:0,expenses:0,advance:0,driver:t.driver||'—',jordan:t.jordanSt||'',israel:t.israelSt||''});
+    const r=unloadingMap.get(key);
+    r.fault += faultAmount(t);
+    r.expenses += (+t.expenses||0);
+    // للسيارة التي تم تفريغها: يظهر مجموع جميع سلف الرحلة في كشف المصاريف الموحد،
+    // وليس فقط السلف التي تاريخها يساوي تاريخ التفريغ.
+    r.advance += totalAdvances(t);
+  });
+  const unloadingRows=[...unloadingMap.values()];
+  const unloadNet=unloadingRows.reduce((s,r)=>s+r.fault+r.expenses-r.advance,0);
+
+  const pendingAdvanceRows=[];
+  filteredTrips.forEach(t=>{
+    const status=String(t.status||'').trim();
+    if(!isUnloaded(t) && status!=='غادرت'){
+      (t.advances||[]).forEach(a=>{
+        if(String(a.date||'')===d && (+a.amount||0)>0){
+          pendingAdvanceRows.push({car:t.car||'—',driver:t.driver||'—',status:status||'—',amount:+a.amount||0,note:a.note||'—'});
+        }
+      });
+    }
+  });
+  const pendingAdvanceTotal=pendingAdvanceRows.reduce((s,r)=>s+r.amount,0);
+  const grand=loadRent+unloadNet+pendingAdvanceTotal;
+
+  html='<div class="card" style="margin-top:12px"><h3>📅 كشف مصاريف '+escapeHtml(d)+(q?' — البحث: '+escapeHtml(searchEl.value):'')+'</h3><div class="grid">'+
+    '<div class="card">أجار التحميل<div class="stat">'+money(loadRent)+'</div></div>'+ 
+    '<div class="card">مجموع الصافي — سيارات التفريغ<div class="stat">'+money(unloadNet)+'</div><div class="small">من عمود الصافي في كشف سيارات التفريغ — كشف موحّد</div></div>'+ 
+    '<div class="card">مجموع سلف السيارات غير المفرغة وغير الغادرت<div class="stat">'+money(pendingAdvanceTotal)+'</div></div>'+ 
+    '<div class="card">المجموع الكلي<div class="stat">'+money(grand)+'</div><div class="small">أجار التحميل + مجموع الصافي + سلف السيارات غير المفرغة وغير الغادرت</div></div></div></div>';
+
+  html+='<div class="card" style="margin-top:12px"><h3>🚛 سيارات التحميل — أجار التحميل</h3><p class="small">السيارات التي تم تحميلها في التاريخ المختار.</p>'+moneyRows(loading,['رقم السيارة','أجار التحميل'],t=>[escapeHtml(t.car||'—'),money(t.rent)])+'</div>';
+
+  html+='<div class="card" style="margin-top:12px"><h3>🚛 سيارات التفريغ — كشف موحّد</h3><p class="small">للسيارات التي تم تفريغها تظهر جميع سلف الرحلة في الكشف الموحد.</p>'+moneyRows(unloadingRows,['رقم السيارة','السائق','حساب العطل','المصاريف','السلفة','الصافي'],r=>[escapeHtml(r.car),escapeHtml(r.driver||'—'),money(r.fault),money(r.expenses),'-'+money(r.advance),money(r.fault+r.expenses-r.advance)])+'</div>';
+
+  html+='<div class="card" style="margin-top:12px"><h3>💵 السلف — سيارات غير مفرغة وغير غادرت</h3><p class="small">السيارات التي ما زالت موجودة ولم يتم تفريغها أو تسجيل مغادرتها، وظهر لها سلفة في التاريخ المختار.</p>'+moneyRows(pendingAdvanceRows,['رقم السيارة','السائق','الحالة','السلفة','الملاحظة'],r=>[escapeHtml(r.car),escapeHtml(r.driver),escapeHtml(r.status),money(r.amount),escapeHtml(r.note)])+'</div>';
+
+  out.innerHTML=html;
+}
+
+function renderOpenOrders(){
+  const out=document.getElementById('openOrdersOut'); if(!out) return;
+  if(!openOrders.length){out.innerHTML='<p style="padding:15px;text-align:center">لا توجد طلبات مفتوحة حالياً.</p>';return;}
+  let html='<div class="grid" style="margin-top:12px"><div class="card">عدد الطلبات المفتوحة<div class="stat">'+openOrders.length+'</div></div><div class="card">إجمالي السيارات المتبقية<div class="stat">'+openOrders.reduce((s,o)=>s+Math.max(0,(+o.carCount||0)-(o.cars||[]).length),0)+'</div></div></div>';
+  html += openOrders.map(o=>{
+    const cars=o.cars||[], total=+o.carCount||0, remaining=Math.max(0,total-cars.length);
+    return '<div class="card open-order-card" data-order-id="'+o.id+'" style="border:1px solid #dbeafe;margin-top:12px">'+
+      '<div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap"><div style="display:flex;align-items:center;gap:10px"><label class="print-check" style="font-weight:bold"><input type="checkbox" class="open-order-print-check" data-order-id="'+o.id+'"> تحديد للطباعة</label><h3 style="margin:0">📦 طلبية رقم '+escapeHtml(o.orderNo||'—')+'</h3></div><div class="actions">'+
+      '<button class="success" onclick="transferOpenOrderToCar('+o.id+')">🚛 إضافة سيارة ('+remaining+' متبقي)</button>'+
+      '<button onclick="printOpenOrder('+o.id+')">🖨️ طباعة الطلبية</button>'+
+      '<button onclick="editOpenOrder('+o.id+')">✏️ تعديل</button><button class="secondary" onclick="closeOpenOrder('+o.id+')">إغلاق</button><button class="danger" onclick="deleteOpenOrder('+o.id+')">حذف</button></div></div>'+
+      '<div class="grid" style="margin-top:10px">'+
+      '<div><b>البيان الإسرائيلي:</b><br>'+escapeHtml(o.israelSt||'بدون بيان إسرائيلي')+'</div>'+
+      '<div><b>اسم الزبون:</b><br>'+escapeHtml(o.customer||'—')+'</div>'+
+      '<div><b>نوع البلاستك:</b><br>'+escapeHtml(o.plastic||'—')+'</div>'+
+      '<div><b>موقع التفريغ:</b><br>'+escapeHtml(o.unloadLocation||'—')+'</div>'+
+      '<div><b>رقم الفاتورة:</b><br>'+escapeHtml(o.invoiceNo||'—')+'</div>'+
+      '<div><b>الوزن المطلوب:</b><br>'+money(o.totalWeight||0)+' كغم</div>'+
+      '<div><b>الوزن المرحّل:</b><br>'+money(o.transferredWeight||0)+' كغم</div>'+
+      '<div><b>الوزن المتبقي:</b><br>'+money(Math.max(0,(+o.totalWeight||0)-(+o.transferredWeight||0)))+' كغم</div>'+
+      '<div><b>تاريخ الطلب:</b><br>'+escapeHtml(o.date||'—')+'</div>'+
+      '<div><b>عدد السيارات:</b><br>'+total+'</div>'+
+      '<div><b>تم ترحيله:</b><br>'+cars.length+'</div>'+
+      '<div><b>المتبقي:</b><br>'+remaining+'</div>'+
+      '<div><b>السيارات المرحّلة:</b><br>'+escapeHtml(cars.join('، ')||'لا يوجد')+'</div>'+
+      '</div></div>';
+  }).join('');
+  out.innerHTML=html;
+}
+
+function toggleAllOpenOrderPrintSelection(checked){
+  document.querySelectorAll('#openOrdersOut .open-order-print-check').forEach(cb=>cb.checked=checked);
+}
+
+function printSelectedOpenOrders(){
+  const checks=[...document.querySelectorAll('#openOrdersOut .open-order-print-check:checked')];
+  if(!checks.length){ alert('حدد طلبية واحدة على الأقل للطباعة.'); return; }
+  const selected=new Set(checks.map(cb=>String(cb.dataset.orderId)));
+  const cards=[...document.querySelectorAll('#openOrdersOut .open-order-card')];
+  const hidden=[];
+  cards.forEach(card=>{ if(!selected.has(String(card.dataset.orderId))){ card.classList.add('print-hide-temp'); hidden.push(card); }});
+  const current=document.getElementById('orders');
+  current.classList.add('printing');
+  setTimeout(()=>{ window.print(); setTimeout(()=>{ current.classList.remove('printing'); hidden.forEach(el=>el.classList.remove('print-hide-temp')); },300); },100);
+}
+
+function printOpenOrder(orderId){
+  const card=[...document.querySelectorAll('#openOrdersOut > .card')].find(c=>c.querySelector('button[onclick="printOpenOrder('+orderId+')"]'));
+  if(!card) return;
+  const all=[...document.querySelectorAll('#openOrdersOut .open-order-card')];
+  const hidden=[];
+  all.forEach(c=>{if(c!==card){c.classList.add('print-hide-temp');hidden.push(c);}});
+  const current=document.getElementById('orders');
+  current.classList.add('printing');
+  setTimeout(()=>{window.print();setTimeout(()=>{current.classList.remove('printing');hidden.forEach(el=>el.classList.remove('print-hide-temp'));},300);},100);
+}
+
+function renderAll(){ allOut.innerHTML = table(trips.slice()); }
+
+
+function renderUnloaded(){
+  const arr = trips.filter(t => isUnloaded(t));
+
+  unloadedCount.textContent = arr.length;
+  unloadedRent.textContent = money(arr.reduce((s,x) => s + (+x.rent || 0), 0));
+  unloadedAdvances.textContent = money(arr.reduce((s,x) => s + totalAdvances(x), 0));
+  unloadedExpenses.textContent = money(arr.reduce((s,x) => s + (+x.expenses || 0), 0));
+  unloadedFaultTotal.textContent = money(arr.reduce((s,x) => s + faultAmount(x), 0));
+  unloadedStay.textContent = arr.reduce((s,x) => s + (calcStayDays(x.loadDate, x.unloadDate) ?? 0), 0) + ' يوم';
+  unloadedFinalTotal.textContent = money(arr.reduce((s,x) => s + netAccountWithoutRent(x), 0));
+
+  if(!arr.length){
+    unloadedOut.innerHTML = '<p style="padding:15px;text-align:center">لا توجد سيارات مفرغة حتى الآن.</p>';
+    return;
+  }
+
+  unloadedOut.innerHTML =
+    '<div class="table-wrapper"><table>' +
+    '<tr>' +
+      '<th>#</th><th>السيارة</th><th>السائق</th><th>نوع البلاستك</th><th>موقع التفريغ</th>' +
+      '<th>تاريخ التحميل</th><th>تاريخ التفريغ</th><th>مدة الجسر</th>' +
+      '<th>عطل السيارة</th><th>صافي حساب العطل</th><th>الأجار</th><th>السلف</th><th>المصاريف</th>' +
+      '<th>إجمالي الحساب</th><th>تفاصيل</th><th>إجراء</th>' +
+    '</tr>' +
+    groupByIsraelStatement(arr).map(([statement, group]) =>
+      groupHeader(statement, group.length, 16) + group.map(x => {
+        const i = trips.indexOf(x);
+        const days = calcStayDays(x.loadDate, x.unloadDate);
+        const fault = +x.carFault || 0;
+        const faultNet = faultAmount(x);
+        const totalAccount = netAccountWithoutRent(x);
+        return '<tr>' +
+          '<td><b>' + (i + 1) + '</b></td>' +
+          '<td><b>' + escapeHtml(x.car || '') + '</b></td>' +
+          '<td>' + escapeHtml(x.driver || '—') + '</td>' +
+          '<td><b>' + escapeHtml(x.plastic || '—') + '</b></td>' +
+          '<td>' + escapeHtml(x.unloadLocation || '—') + '</td>' +
+          '<td>' + escapeHtml(x.loadDate || '—') + '</td>' +
+          '<td>' + escapeHtml(x.unloadDate || '—') + '</td>' +
+          '<td><b>' + stayText(days) + '</b></td>' +
+          '<td>' + money(fault) + '</td>' +
+          '<td><b>' + money(faultNet) + '</b></td>' +
+          '<td>' + money(x.rent) + '</td>' +
+          '<td>' + money(totalAdvances(x)) + '</td>' +
+          '<td>' + money(x.expenses) + '</td>' +
+          '<td><b>' + money(totalAccount) + '</b></td>' +
+          '<td><button onclick="showUnloadedDetails(' + i + ')">عرض التفاصيل</button></td>' +
+          '<td>' + actions(i) + '</td>' +
+        '</tr>';
+      }).join('')
+    ).join('') +
+    '</table></div>';
+}
+
+function showUnloadedDetails(i){
+  const t = trips[i];
+  if(!t || !isUnloaded(t)) return;
+
+  const days = calcStayDays(t.loadDate, t.unloadDate);
+  const fault = +t.carFault || 0;
+  const faultNet = faultAmount(t);
+  const totalAccount = netAccountWithoutRent(t);
+
+  alert(
+    'تفاصيل السيارة: ' + (t.car || '') + '\n\n' +
+    'السائق: ' + (t.driver || '—') + '\n' +
+    'البيان الأردني: ' + (t.jordanSt || t.statement || '—') + '\n' +
+    'البيان الإسرائيلي: ' + (t.israelSt || '—') + '\n' +
+    'موقع التفريغ: ' + (t.unloadLocation || '—') + '\n' +
+    'تاريخ التحميل: ' + (t.loadDate || '—') + '\n' +
+    'تاريخ التفريغ: ' + (t.unloadDate || '—') + '\n' +
+    'مدة البقاء على الجسر: ' + stayText(days) + '\n' +
+    'عطل السيارة: ' + money(fault) + '\n' +
+    'صافي حساب العطل: ' + money(faultNet) + '\n' +
+    'الأجار: ' + money(t.rent) + '\n' +
+    'السلف: ' + money(totalAdvances(t)) + '\n' +
+    'المصاريف: ' + money(t.expenses) + '\n' +
+    'إجمالي الحساب: ' + money(totalAccount)
+  );
+}
+
+
+function exportUnloadedCSV(){
+  const arr = trips.filter(t => isUnloaded(t));
+  if(!arr.length) return alert('لا توجد سيارات مفرغة للتصدير');
+
+  let csv = '\uFEFFالرقم,السيارة,بيان أردني,بيان إسرائيلي,السائق,نوع البلاستك,موقع التفريغ,تاريخ التحميل,تاريخ التفريغ,مدة الجسر,عطل السيارة,صافي حساب العطل,الأجار,السلف,المصاريف,إجمالي الحساب\n';
+
+  arr.forEach((t) => {
+    const days = calcStayDays(t.loadDate, t.unloadDate);
+    const faultNet = faultAmount(t);
+    const totalAccount = netAccountWithoutRent(t);
+    const row = [
+      trips.indexOf(t) + 1,
+      t.car || '',
+      t.jordanSt || t.statement || '',
+      t.israelSt || '',
+      t.driver || '',
+      t.plastic || '',
+      t.unloadLocation || '',
+      t.loadDate || '',
+      t.unloadDate || '',
+      days === null ? '' : days,
+      t.carFault || 0,
+      faultNet,
+      t.rent || 0,
+      totalAdvances(t),
+      t.expenses || 0,
+      totalAccount
+    ].map(v => '"' + String(v).replace(/"/g, '""') + '"').join(',');
+    csv += row + '\n';
+  });
+
+  const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `كشف_السيارات_المفرغة_${today()}.csv`;
+  a.click();
+}
+
+
+
+function renderDeparted(){
+  const arr = trips.filter(t => normalizeStatusValue(t.status) === 'غادرت');
+  departedCount.textContent = arr.length;
+  departedRent.textContent = money(arr.reduce((s,x)=>s+(+x.rent||0),0));
+  if(!arr.length){
+    departedOut.innerHTML = '<p style="padding:15px;text-align:center">لا توجد سيارات غادرت حتى الآن.</p>';
+    return;
+  }
+  departedOut.innerHTML =
+    '<div class="table-wrapper"><table>' +
+    '<tr><th>#</th><th>السيارة</th><th>السائق</th><th>اسم الزبون</th><th>نوع البلاستك</th><th>البيان الأردني</th><th>البيان الإسرائيلي</th><th>تاريخ التحميل</th><th>تاريخ التفريغ</th><th>الأجار</th><th>الحالة</th><th>إجراء</th></tr>' +
+    groupByIsraelStatement(arr).map(([statement, group]) =>
+      groupHeader(statement, group.length, 12) + group.map(x => {
+        const i = trips.indexOf(x);
+        return '<tr>' +
+          '<td><b>'+(i+1)+'</b></td>' +
+          '<td><b>'+escapeHtml(x.car||'')+'</b></td>' +
+          '<td>'+escapeHtml(driverForTrip(x)||'—')+'</td>' +
+          '<td>'+escapeHtml(x.customer||'—')+'</td>' +
+          '<td>'+escapeHtml(x.plastic||'—')+'</td>' +
+          '<td>'+escapeHtml(x.jordanSt||'—')+'</td>' +
+          '<td>'+escapeHtml(x.israelSt||'—')+'</td>' +
+          '<td>'+escapeHtml(x.loadDate||'—')+'</td>' +
+          '<td>'+escapeHtml(x.unloadDate||'—')+'</td>' +
+          '<td>'+money(x.rent)+'</td>' +
+          '<td>'+statusBadge(x.status)+'</td>' +
+          '<td>'+actions(i)+'</td>' +
+        '</tr>';
+      }).join('')
+    ).join('') +
+    '</table></div>';
+}
+function exportDepartedCSV(){
+  const arr = trips.filter(t => normalizeStatusValue(t.status) === 'غادرت');
+  if(!arr.length) return alert('لا توجد سيارات غادرت للتصدير');
+
+  let csv = '\uFEFFالرقم,السيارة,السائق,اسم الزبون,نوع البلاستك,البيان الأردني,البيان الإسرائيلي,تاريخ التحميل,تاريخ التفريغ,الأجار,الحالة\n';
+  arr.forEach(t => {
+    const row = [
+      trips.indexOf(t)+1,t.car||'',t.driver||'',t.customer||'',t.plastic||'',
+      t.jordanSt||'',t.israelSt||'',t.loadDate||'',t.unloadDate||'',t.rent||0,t.status||''
+    ].map(v => '"' + String(v).replace(/"/g,'""') + '"').join(',');
+    csv += row + '\n';
+  });
+  const blob = new Blob([csv], {type:'text/csv;charset=utf-8;'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `كشف_السيارات_التي_غادرت_${today()}.csv`;
+  a.click();
+  setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+}
+
+
+function isDeparted(t){
+  return normalizeStatusValue(t.status) === 'غادرت';
+}
+
+function isCurrentlyAvailable(t){
+  return !isUnloaded(t) && !isDeparted(t);
+}
+
+function renderAvailable(){
+  const qInv=(document.getElementById('availableInvoiceSearch')?.value||'').trim().toLowerCase();
+  const arr = trips.filter(isCurrentlyAvailable).slice().sort((a,b) => {
+    const da = String(a.loadDate || '9999-12-31');
+    const db = String(b.loadDate || '9999-12-31');
+    if(da !== db) return da.localeCompare(db);
+    const xa = String(a.date || '9999-12-31');
+    const xb = String(b.date || '9999-12-31');
+    return xa.localeCompare(xb);
+  });
+  availableCount.textContent = arr.length;
+  availableRent.textContent = money(arr.reduce((s,x)=>s+(+x.rent||0),0));
+
+  if(!arr.length){
+    availableOut.innerHTML = '<div class="card"><p style="text-align:center">لا توجد سيارات موجودة حالياً.</p></div>';
+    return;
+  }
+
+  // تجميع السيارات الموجودة حالياً حسب البيان الإسرائيلي.
+  // السيارات المرتبطة بنفس البيان الإسرائيلي تظهر معاً في نفس المجموعة.
+  const groups = {};
+  arr.forEach(x => {
+    const key = String(x.israelSt || 'بدون بيان إسرائيلي').trim() || 'بدون بيان إسرائيلي';
+    if(!groups[key]) groups[key] = [];
+    groups[key].push(x);
+  });
+
+  let html = '<div class="table-wrapper"><table>' +
+    '<tr><th>#</th><th>السيارة</th><th>بيان أردني</th><th>بيان إسرائيلي</th><th>رقم الفاتورة</th><th>السائق</th><th>اسم الزبون</th><th>نوع البلاستك</th><th>Batch Number</th><th>موقع التفريغ</th><th>تاريخ التحميل</th><th>الوزن</th><th>الأجار</th><th>الحالة</th><th>إجراء</th></tr>';
+
+  // ترتيب مجموعات البيانات أيضاً حسب أقدم تاريخ تحميل داخل المجموعة،
+  // حتى يبقى كشف السيارات الموجود حالياً مرتباً فعلياً حسب تاريخ التحميل.
+  const sortedGroups = Object.entries(groups).sort((a,b) => {
+    const da = String(a[1][0]?.loadDate || '9999-12-31');
+    const db = String(b[1][0]?.loadDate || '9999-12-31');
+    return da.localeCompare(db);
+  });
+
+  sortedGroups.forEach(([key, group]) => {
+    group.sort((a,b) => {
+      const da = String(a.loadDate || '9999-12-31');
+      const db = String(b.loadDate || '9999-12-31');
+      if(da !== db) return da.localeCompare(db);
+      return String(a.date || '9999-12-31').localeCompare(String(b.date || '9999-12-31'));
+    });
+    html += '<tr style="background:#dbeafe">' +
+      '<td colspan="15"><b>📄 بيان إسرائيلي: ' + escapeHtml(key) +
+      '</b> — <b>' + group.length + ' سيارة</b> — السيارات المرتبطة بهذا البيان مجمعة معاً</td></tr>';
+
+    group.forEach(x => {
+      const i = trips.indexOf(x);
+      html += '<tr>' +
+        '<td><b>'+(i+1)+'</b></td>' +
+        '<td><b>'+escapeHtml(x.car||'')+'</b></td>' +
+        '<td>'+escapeHtml(x.jordanSt||'—')+'</td>' +
+        '<td><b>'+escapeHtml(x.israelSt||'—')+'</b></td>' +
+        '<td><b>'+escapeHtml(x.invoiceNo||'—')+'</b></td>' +
+        '<td>'+escapeHtml(driverForTrip(x)||'—')+'</td>' +
+        '<td><b>'+escapeHtml(x.customer||'—')+'</b></td>' +
+        '<td>'+escapeHtml(x.plastic||'—')+'</td>' +
+        '<td>'+escapeHtml(x.batchNo||'—')+'</td>' +
+        '<td>'+escapeHtml(x.unloadLocation||'—')+'</td>' +
+        '<td>'+escapeHtml(x.loadDate||'—')+'</td>' +
+        '<td>'+money(x.weight)+'</td>' +
+        '<td>'+money(x.rent)+'</td>' +
+        '<td>'+statusBadge(x.status)+'</td>' +
+        '<td>'+actions(i)+'</td>' +
+      '</tr>';
+    });
+  });
+
+  html += '</table></div>';
+  availableOut.innerHTML = html;
+}
+
+function exportAvailableCSV(){
+  const arr = trips.filter(isCurrentlyAvailable).slice().sort((a,b) => {
+    const da = String(a.loadDate || '9999-12-31'), db = String(b.loadDate || '9999-12-31');
+    if(da !== db) return da.localeCompare(db);
+    return String(a.date || '9999-12-31').localeCompare(String(b.date || '9999-12-31'));
+  });
+  if(!arr.length) return alert('لا توجد سيارات موجودة حالياً للتصدير');
+
+  let csv = '\uFEFFالرقم,السيارة,بيان أردني,بيان إسرائيلي,السائق,اسم الزبون,نوع البلاستك,Batch Number,موقع التفريغ,تاريخ التحميل,الوزن,الأجار,الحالة\n';
+  arr.forEach(t => {
+    const row = [
+      trips.indexOf(t)+1,t.car||'',t.jordanSt||'',t.israelSt||'',t.driver||'',t.customer||'',t.plastic||'',
+      t.batchNo||'',t.unloadLocation||'',t.loadDate||'',t.weight||0,t.rent||0,t.status||''
+    ].map(v => '"' + String(v).replace(/"/g,'""') + '"').join(',');
+    csv += row + '\n';
+  });
+  const blob = new Blob([csv], {type:'text/csv;charset=utf-8;'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `كشف_السيارات_الموجودة_${today()}.csv`;
+  a.click();
+  setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+}
+
+function escapeHtml(v){
+  return String(v ?? '').replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));
+}
+
+function exportCSV(){
+  if(!trips.length) return alert('لا توجد بيانات للتصدير');
+  let csv = '\uFEFFالرقم,السيارة,البيان الأردني,البيان الإسرائيلي,السائق,اسم الزبون,نوع البلاستك,Batch Number,رقم الفاتورة,موقع التفريغ,عطل السيارة,الوزن,تاريخ التحميل,تاريخ التفريغ,مدة البقاء على الجسر,الأجار,إجمالي السلف,المصاريف,الحالة\n';
+  trips.forEach((t, i) => {
+    csv += `"${i+1}","${t.car}","${t.jordanSt||''}","${t.israelSt||''}","${t.driver}","${t.customer||''}","${t.plastic||''}","${t.batchNo||''}","${t.invoiceNo||''}","${t.unloadLocation||''}","${t.carFault||''}","${t.weight||0}","${t.loadDate||''}","${t.unloadDate||''}","${calcStayDays(t.loadDate,t.unloadDate) ?? ''}","${t.rent||0}","${totalAdvances(t)}","${t.expenses||0}","${t.status||''}"\n`;
+  });
+  const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `رحلات_الشيخ_حسين_${today()}.csv`;
+  a.click();
+}
+
+function overwriteBackupFile(event){
+  const file = event.target.files[0];
+  if(!file) return;
+
+  const backup = {backupVersion:2,savedAt:new Date().toISOString(),trips:trips,openOrders:openOrders,masterCars:getMasterCars(),warehouse:warehouse,warehouseCompleted:warehouseCompleted};
+  const blob = new Blob([JSON.stringify(backup, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+
+  // تنزيل باسم نفس الملف المختار؛ على iPhone/المتصفح قد يظهر خيار استبدال الملف.
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = file.name || `backup_sheikh_hussein_${today()}.json`;
+  a.click();
+
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+  alert('تم تجهيز النسخة الاحتياطية بنفس اسم الملف. إذا ظهر خيار استبدال، اختر استبدال.');
+}
+
+function restoreData(){
+  const inp = document.createElement('input');
+  inp.type = 'file';
+  inp.accept = '.json';
+  inp.onchange = e => {
+    const file = e.target.files[0];
+    if(!file) return;
+    const reader = new FileReader();
+    reader.onload = ev => {
+      try {
+        const data = JSON.parse(ev.target.result);
+        if(Array.isArray(data)){
+          trips = data;
+          syncWarehouseFromTrips();
+          save();
+          alert('تم استرجاع النسخة الاحتياطية بنجاح!');
+          show('all');
+        } else if(data && Array.isArray(data.trips)){
+          trips = data.trips;
+          if(Array.isArray(data.openOrders)) openOrders = data.openOrders;
+          if(Array.isArray(data.masterCars)) localStorage.setItem('masterCars', JSON.stringify(data.masterCars));
+          if(Array.isArray(data.warehouse)) warehouse=data.warehouse;
+          if(Array.isArray(data.warehouseCompleted)) warehouseCompleted=data.warehouseCompleted;
+          syncWarehouseFromTrips();
+          save();
+          alert('تم استرجاع النسخة الاحتياطية الشاملة بنجاح!');
+          show('all');
+        } else alert('ملف غير صالح');
+      } catch(err){ alert('حدث خطأ أثناء قراءة الملف'); }
+    };
+    reader.readAsText(file);
+  };
+  inp.click();
+}
+
+// عند فتح البرنامج، أعد حساب المخزن تلقائياً من أوزان كل السيارات المحملة حسب الفاتورة.
+try { syncWarehouseFromTrips(); } catch(e) {}
+resetForm();
+if(document.getElementById('warehouseDate')) document.getElementById('warehouseDate').value=today();
+if(document.getElementById('orderDate') && !document.getElementById('orderDate').value) document.getElementById('orderDate').value=today();
+update();
+try { createAutoBackup(); } catch(e) {}
+</script>
+</body>
+</html>
+
+<script>
+// نسخة احتياطية تلقائية دورية وتحديث آخر وقت حفظ
+setInterval(() => { try { if (typeof trips !== 'undefined') createAutoBackup(); } catch(e) {} }, 60000);
+window.addEventListener('beforeunload', () => { try { if (typeof trips !== 'undefined') createAutoBackup(); } catch(e) {} });
+</script>
